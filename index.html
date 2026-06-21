@@ -12,6 +12,7 @@
         .heading-font { font-family: 'Playfair Display', serif; }
         .devotion-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); }
         .accent-gold { color: #fbbf24; }
+        .section-divider { border-top: 1px solid rgba(251, 191, 36, 0.2); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -27,7 +28,7 @@
                 <a href="prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
                 <a href="bible/" class="hover:text-amber-400 transition-colors">Bible</a>
             </div>
-            <a href="mailto:ruby@spokendevotion.com" class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all">
+            <a href="mailto:ruby@spokendevotion.com" class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
                 Contact
             </a>
         </div>
@@ -36,7 +37,9 @@
     <!-- Hero -->
     <div class="min-h-screen pt-20 flex items-center devotion-bg relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="mx-auto mb-10 text-7xl">🕊️</div>
+            <div class="mx-auto mb-8">
+                <i class="fa-solid fa-dove text-7xl accent-gold"></i>
+            </div>
             <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-8">
                 Spoken words that heal,<br>lift, and draw us near to God.
             </h1>
@@ -45,39 +48,149 @@
                 Honoring Christ and God the Father in every word.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#social" class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg">Follow Our Journey</a>
+                <a href="#featured" class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg hover:bg-amber-300 transition-all">Listen Now</a>
                 <a href="worship/" class="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-3xl text-lg">Enter Worship</a>
             </div>
         </div>
     </div>
 
-    <!-- Social Hub -->
-    <div id="social" class="max-w-6xl mx-auto px-6 py-24">
-        <h2 class="text-5xl font-semibold tracking-tight text-center mb-16">Connect With Us</h2>
-        <div class="grid md:grid-cols-4 gap-6 text-center">
-            <a href="#" class="block p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-tiktok text-5xl mb-4"></i>
-                <p>TikTok</p>
-            </a>
-            <a href="#" class="block p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-facebook text-5xl mb-4"></i>
-                <p>Facebook</p>
-            </a>
-            <a href="#" class="block p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-x-twitter text-5xl mb-4"></i>
-                <p>X</p>
-            </a>
-            <a href="#" class="block p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-spotify text-5xl mb-4"></i>
-                <p>Spotify (Coming Soon)</p>
-            </a>
+    <!-- About / Mission -->
+    <div class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-4">Our Heart</h2>
+            <p class="text-lg text-white/70 max-w-3xl mx-auto">
+                Spoken Devotion exists to bring comfort, strength, and hope through the power of spoken words. 
+                In a world full of noise, we offer moments of peace — words that point hearts back to Jesus.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="bg-zinc-900 p-8 rounded-3xl">
+                <i class="fa-solid fa-heart text-4xl accent-gold mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">Healing for the Heart</h3>
+                <p class="text-white/70">Spoken poetry and Scripture that bring emotional healing and remind us we are deeply loved by God.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl">
+                <i class="fa-solid fa-pray text-4xl accent-gold mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">Strength in Prayer</h3>
+                <p class="text-white/70">Prayers that lift burdens, declare truth, and draw us closer to the throne of grace.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl">
+                <i class="fa-solid fa-book-bible text-4xl accent-gold mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">The Living Word</h3>
+                <p class="text-white/70">Audio Scripture that nourishes the soul and equips us to walk in faith each day.</p>
+            </div>
         </div>
     </div>
 
+    <!-- Featured Spoken Poetry -->
+    <div id="featured" class="bg-zinc-900 py-20 section-divider">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-4">Featured Spoken Poetry</h2>
+                <p class="text-white/70">A moment of reflection and encouragement</p>
+            </div>
+            
+            <div class="bg-zinc-950 border border-amber-400/20 rounded-3xl p-10 md:p-12">
+                <div class="prose prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold mb-6 accent-gold">“In the Quiet Place”</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        In the quiet place where the world grows still,<br>
+                        Where the noise of life cannot reach my soul,<br>
+                        There I meet You, Lord, in the gentle whisper,<br>
+                        In the hush of Your presence, I am made whole.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        You speak peace to the storms that rage within,<br>
+                        You calm the anxious thoughts that steal my rest.<br>
+                        Your Word is a lamp unto my weary feet,<br>
+                        And in Your light, I find my very best.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8">
+                        So I come, not with loud cries or many words,<br>
+                        But with a heart laid bare before Your throne.<br>
+                        Here in the silence, I hear Your voice so clear:<br>
+                        “Child, you are Mine, and you are never alone.”
+                    </p>
+                    <p class="text-right text-amber-400 italic">— Spoken Devotion</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sample Prayer -->
+    <div class="max-w-4xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-4">A Prayer for Today</h2>
+        </div>
+        
+        <div class="bg-zinc-900 border border-amber-400/20 rounded-3xl p-10">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-lg leading-relaxed italic mb-6">
+                    Heavenly Father,<br><br>
+                    Thank You for the gift of Your Word and the power of spoken prayer. 
+                    Today I lay down my burdens, my fears, and my distractions at Your feet. 
+                    Speak to my heart in the quiet moments. Fill me with Your peace that surpasses understanding. 
+                    Help me to trust You more, to love others as You have loved me, and to walk in the light of Your truth.<br><br>
+                    In Jesus’ precious name, Amen.
+                </p>
+                <p class="text-right text-sm text-amber-400">— A simple prayer from our hearts to yours</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripture Highlight -->
+    <div class="bg-zinc-900 py-20 section-divider">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-8">Scripture for the Soul</h2>
+            <div class="max-w-3xl mx-auto">
+                <blockquote class="text-2xl md:text-3xl font-light leading-snug mb-6">
+                    “Be still, and know that I am God.”<br>
+                    <span class="text-lg text-amber-400">— Psalm 46:10</span>
+                </blockquote>
+                <p class="text-white/70">In the stillness, we find strength. In His presence, we find peace.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social & Connect -->
+    <div id="social" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-center mb-4">Connect With Us</h2>
+        <p class="text-center text-white/70 mb-12 max-w-md mx-auto">Follow along for daily encouragement, spoken pieces, and worship moments.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
+                <i class="fa-brands fa-tiktok text-4xl mb-3 accent-gold"></i>
+                <span class="font-medium">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
+                <i class="fa-brands fa-facebook text-4xl mb-3 accent-gold"></i>
+                <span class="font-medium">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
+                <i class="fa-brands fa-instagram text-4xl mb-3 accent-gold"></i>
+                <span class="font-medium">Instagram</span>
+            </a>
+            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
+                <i class="fa-brands fa-x-twitter text-4xl mb-3 accent-gold"></i>
+                <span class="font-medium">X (Twitter)</span>
+            </a>
+            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all col-span-2 md:col-span-1">
+                <i class="fa-brands fa-youtube text-4xl mb-3 accent-gold"></i>
+                <span class="font-medium">YouTube</span>
+            </a>
+        </div>
+        
+        <p class="text-center text-sm text-white/60 mt-8">Spotify & Apple Music coming soon, Lord willing.</p>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-black py-12 text-center text-sm text-white/60">
-        © 2026 Spoken Devotion • ruby@spokendevotion.com<br>
-        Emotional strength in Christ • All glory to God
+    <footer class="bg-black py-12 text-center text-sm text-white/60 border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="mb-2">© 2026 Spoken Devotion • All glory to God the Father</p>
+            <p class="mb-4">ruby@spokendevotion.com</p>
+            <p class="text-xs">Part of the Simkins family ministries • Emotional strength in Christ</p>
+        </div>
     </footer>
 </body>
 </html>
