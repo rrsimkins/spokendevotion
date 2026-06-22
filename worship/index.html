@@ -12,17 +12,13 @@
         .heading-font { font-family: 'Playfair Display', serif; }
         .worship-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
         .accent-gold { color: #fbbf24; }
-        .lyrics {
-            white-space: pre-line;
-            line-height: 1.75;
-        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-x-3">
-                <!-- Logo Icon -->
                 <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
@@ -35,6 +31,7 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <div class="min-h-screen pt-20 flex items-center worship-bg">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -46,114 +43,157 @@
                 </p>
             </div>
 
-            <!-- Featured Song -->
-            <div class="bg-zinc-900 rounded-3xl p-8 mb-8" id="featured-item">
-                <h3 class="text-2xl font-semibold mb-1">Have Mercy on Me</h3>
-                <p class="text-amber-400 text-sm mb-2">Sung by Anna • Lyrics by Anthony • Preview</p>
-                
+            <!-- Featured Song Card (includes lyrics excerpt for homepage) -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Have Mercy on Me</h3>
+                    <p class="text-amber-400 text-sm">Sung by Anna • Lyrics by Anthony • Preview</p>
+                </div>
+
                 <audio controls class="w-full mb-6">
                     <source src="have_mercy_on_me.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                
-                <a href="../have_mercy_on_me.mp3" download class="text-amber-400 hover:underline text-sm mb-6 inline-block">↓ Download MP3</a>
+
+                <a href="../have_mercy_on_me.mp3" download 
+                   class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm mb-8">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download MP3</span>
+                </a>
+
+                <!-- Clean lyrics excerpt for homepage featured section -->
+                <div class="border-t border-white/10 pt-6">
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3 tracking-wider">LYRICS EXCERPT</h4>
+                    <p class="text-lg leading-relaxed italic text-white/90">
+                        I’m tired of the sleepless nights<br><br>
+                        Tired of this emptiness inside<br><br>
+                        Tired of the sorrow sitting heavy on my chest<br><br>
+                        Tired of feeling so alone<br><br>
+                        
+                        Have mercy on me<br><br>
+                        I’m too weak to lift my head<br><br>
+                        Have mercy on me<br><br>
+                        I’ve failed You again and again<br><br>
+                        I don’t deserve to speak Your name<br><br>
+                        But I’m breaking, Lord, I’m breaking<br><br>
+                        Have mercy on me
+                    </p>
+                </div>
             </div>
-            
-            <!-- Song 2 -->
-            <div class="bg-zinc-900 rounded-3xl p-8">
-                <h3 class="text-2xl font-semibold mb-1">Have Mercy on Me</h3>
-                <p class="text-amber-400 text-sm mb-6">Sung by John • Lyrics by Anthony • Preview</p>
-                <audio controls class="w-full mb-4">
+
+            <!-- Second Version -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-12">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Have Mercy on Me</h3>
+                    <p class="text-amber-400 text-sm">Sung by John • Lyrics by Anthony • Preview</p>
+                </div>
+
+                <audio controls class="w-full mb-6">
                     <source src="have_mercy_on_me_2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <a href="../have_mercy_on_me_2.mp3" download class="text-amber-400 hover:underline text-sm">↓ Download MP3</a>
+
+                <a href="../have_mercy_on_me_2.mp3" download 
+                   class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download MP3</span>
+                </a>
             </div>
 
-                <!-- Lyrics -->
-                <div class="mt-6 border-t border-white/10 pt-6">
-                    <h4 class="text-lg font-semibold text-amber-400 mb-4">Lyrics</h4>
-                    <div class="lyrics text-white/90 text-[15px] leading-relaxed">
-                    <br>I’m tired of the sleepless nights <br>
-                    Tired of this emptiness inside <br>
-                    Tired of the sorrow sitting heavy on my chest<br>
-                    Tired of feeling so alone<br><br>
-                    
-                    I try to smile, I try to pretend<br>
-                    But everyone else looks happy in the end<br>
-                    I reach for people but they turn away<br>
-                    And I’m left here with the weight<br><br>
-                    
-                    I know You were rejected too<br>
-                    I know You carried pain You never deserved<br>
-                    But Lord, I’m so ashamed of who I’ve been<br>
-                    I can’t even lift my head<br><br><br>
-                    
-                    Have mercy on me<br><br>
-                    I’m too weak to lift my head<br><br>
-                    Have mercy on me<br><br>
-                    I’ve failed You again and again<br>
-                    I don’t deserve to speak Your name<br>
-                    I don’t deserve to look at You<br>
-                    But I’m breaking, Lord, I’m breaking<br><br>
-                    Have mercy on me<br><br>
-                    
-                    I feel the guilt of all my past<br>
-                    The things I did, the lines I crossed<br>
-                    I struggle just to do what’s right<br>
-                    And I’m scared I’m too far gone to fight<br>
-                    
-                    My soul aches and my body’s worn<br>
-                    I worry all day and can’t sleep when it’s dark<br>
-                    I wonder if I’m too old to change<br>
-                    If this heart is just too stained<br><br>
-                    
-                    I know You were rejected too<br>
-                    You know what it’s like to be cast aside<br>
-                    So Jesus, if You’re listening now<br>
-                    Please don’t turn away tonight<br><br>
-                    
-                    Have mercy on me<br><br>
-                    I’m too weak to lift my head<br>
-                    Have mercy on me<br><br>
-                    I’ve failed You again and again<br>
-                    I don’t deserve to speak Your name<br>
-                    I don’t deserve to look at You<br>
-                    But I’m breaking, Lord, I’m breaking<br><br>
-                    Have mercy on me<br><br>
-                    
-                    How did You carry all our trouble?<br>
-                    How did You bear what we deserved?<br>
-                    I come with nothing but my shame<br>
-                    And still I’m hoping You’ll let me in<br><br>
-                    
-                    I’m tired of pretending I’m okay<br>
-                    I’m tired of hiding in the dark<br>
-                    I don’t have the strength to fix myself<br>
-                    So I’m laying here with my broken heart<br><br>
-                    
-                    Have mercy on me…<br><br>
-                    I’m too weak to lift my head<br><br>
-                    Have mercy on me…<br><br>
-                    I’ve failed You again and again<br><br>
-                    
-                    Even if I’m too far gone<br>
-                    Even if I’m too ashamed<br>
-                    Lord, I’m reaching in the darkness<br><br>
-                    Have mercy on me<br><br>
-                    
-                    Have mercy… have mercy…<br>
-                    I’m too weak… but I’m here<br><br>
-                    Have mercy on me
-                    </div>
+            <!-- Full Lyrics Section -->
+            <div class="max-w-3xl mx-auto">
+                <div class="flex items-center gap-x-3 mb-6">
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <h4 class="text-xl font-semibold text-amber-400 tracking-wider">FULL LYRICS</h4>
+                    <div class="h-px flex-1 bg-white/10"></div>
                 </div>
 
-            <p class="text-center text-amber-300 italic mt-16">More worship songs and experiences coming soon — God willing.</p>
+                <div class="bg-zinc-900/60 border border-white/10 rounded-3xl p-10 md:p-12">
+                    <p class="text-xl leading-[1.85] italic text-white/90">
+                        I’m tired of the sleepless nights<br><br>
+                        Tired of this emptiness inside<br><br>
+                        Tired of the sorrow sitting heavy on my chest<br><br>
+                        Tired of feeling so alone<br><br>
+                        
+                        I try to smile, I try to pretend<br><br>
+                        But everyone else looks happy in the end<br><br>
+                        I reach for people but they turn away<br><br>
+                        And I’m left here with the weight<br><br>
+                        
+                        I know You were rejected too<br><br>
+                        I know You carried pain You never deserved<br><br>
+                        But Lord, I’m so ashamed of who I’ve been<br><br>
+                        I can’t even lift my head<br><br>
+                        
+                        Have mercy on me<br><br>
+                        I’m too weak to lift my head<br><br>
+                        Have mercy on me<br><br>
+                        I’ve failed You again and again<br><br>
+                        I don’t deserve to speak Your name<br><br>
+                        I don’t deserve to look at You<br><br>
+                        But I’m breaking, Lord, I’m breaking<br><br>
+                        Have mercy on me<br><br>
+                        
+                        I feel the guilt of all my past<br><br>
+                        The things I did, the lines I crossed<br><br>
+                        I struggle just to do what’s right<br><br>
+                        And I’m scared I’m too far gone to fight<br><br>
+                        
+                        My soul aches and my body’s worn<br><br>
+                        I worry all day and can’t sleep when it’s dark<br><br>
+                        I wonder if I’m too old to change<br><br>
+                        If this heart is just too stained<br><br>
+                        
+                        I know You were rejected too<br><br>
+                        You know what it’s like to be cast aside<br><br>
+                        So Jesus, if You’re listening now<br><br>
+                        Please don’t turn away tonight<br><br>
+                        
+                        Have mercy on me<br><br>
+                        I’m too weak to lift my head<br><br>
+                        Have mercy on me<br><br>
+                        I’ve failed You again and again<br><br>
+                        I don’t deserve to speak Your name<br><br>
+                        I don’t deserve to look at You<br><br>
+                        But I’m breaking, Lord, I’m breaking<br><br>
+                        Have mercy on me<br><br>
+                        
+                        How did You carry all our trouble?<br><br>
+                        How did You bear what we deserved?<br><br>
+                        I come with nothing but my shame<br><br>
+                        And still I’m hoping You’ll let me in<br><br>
+                        
+                        I’m tired of pretending I’m okay<br><br>
+                        I’m tired of hiding in the dark<br><br>
+                        I don’t have the strength to fix myself<br><br>
+                        So I’m laying here with my broken heart<br><br>
+                        
+                        Have mercy on me…<br><br>
+                        I’m too weak to lift my head<br><br>
+                        Have mercy on me…<br><br>
+                        I’ve failed You again and again<br><br>
+                        
+                        Even if I’m too far gone<br><br>
+                        Even if I’m too ashamed<br><br>
+                        Lord, I’m reaching in the darkness<br><br>
+                        Have mercy on me<br><br>
+                        
+                        Have mercy… have mercy…<br><br>
+                        I’m too weak… but I’m here<br><br>
+                        Have mercy on me
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-center text-amber-300 italic mt-16 text-lg">
+                More worship songs and experiences coming soon — God willing.
+            </p>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
-        © 2026 Spoken Devotion Worship • ruby@spokendevotion.com
+        © 2026 Spoken Devotion • Worship • ruby@spokendevotion.com
     </footer>
 </body>
 </html>
