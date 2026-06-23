@@ -80,12 +80,17 @@
             <div class="bg-zinc-900/80 border border-amber-400/30 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
                 <div class="mb-6">
                     <h3 class="text-3xl font-semibold mb-1">Prayer for Family</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 23, 2026 • Sang by Anna</p>
                 </div>
                 <audio controls class="w-full mb-6">
                     <source src="prayer_for_family.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="flex flex-wrap gap-3">
+                    <a href="prayer_for_family.mp3" download
+                       class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
                     <button onclick="showPrayer('family-prayer')" 
                             class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
                         <i class="fa-solid fa-book-open"></i> Show Prayer
@@ -101,12 +106,17 @@
             <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10">
                 <div class="mb-6">
                     <h3 class="text-3xl font-semibold mb-1">Prayer of Repentance</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 19, 2026 • Recited by Anna</p>
                 </div>
                 <audio controls class="w-full mb-6">
                     <source src="prayer_of_repentance.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="flex flex-wrap gap-3">
+                    <a href="prayer_of_repentance.mp3" download
+                       class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
                     <button onclick="showPrayer('repentance-prayer')" 
                             class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
                         <i class="fa-solid fa-book-open"></i> Show Prayer
@@ -181,7 +191,7 @@
             document.getElementById('prayer-modal').style.display = 'none';
         }
 
-        // Share function - copies direct MP3 link
+        // Share function
         function shareAudio(filename, title) {
             const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
             const fullUrl = `${baseUrl}/${filename}`;
@@ -193,7 +203,6 @@
             });
         }
 
-        // Toast notification
         function showToast(message) {
             const toast = document.getElementById('toast');
             const text = document.getElementById('toast-text');
