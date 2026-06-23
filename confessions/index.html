@@ -10,211 +10,182 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
-        .confession-bg { 
-            background: linear-gradient(135deg, #4c1d95 0%, #312e81 45%, #1e3a8a 100%); 
+        .confession-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
         }
-        .accent-gold { color: #fbbf24; }
-        .poem-line { 
-            display: block; 
-            margin-bottom: 0.35rem; 
-            line-height: 1.7;
-        }
-        .section-card {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .section-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        .modal-content {
+            background: #18181b;
+            width: 100%;
+            max-width: 720px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #fbbf24;
         }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-x-3">
-                <!-- Logo Icon -->
                 <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
             <div class="flex gap-x-6 text-sm">
-                <a href="../" class="hover:text-amber-400 transition-colors">Home</a>
-                <a href="../worship/" class="hover:text-amber-400 transition-colors">Worship</a>
-                <a href="../prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
-                <a href="../bible/" class="hover:text-amber-400 transition-colors">Bible</a>
+                <a href="../" class="hover:text-amber-400">Home</a>
+                <a href="../worship/" class="hover:text-amber-400">Worship</a>
+                <a href="../prayer/" class="hover:text-amber-400">Prayer</a>
+                <a href="../bible/" class="hover:text-amber-400">Bible</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / Main Content -->
+    <!-- Hero -->
     <div class="min-h-screen pt-20 flex items-center confession-bg">
-        <div class="max-w-5xl mx-auto px-6 pb-16">
-            <!-- Title Section -->
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-x-2 mb-4 px-4 py-1.5 bg-white/10 rounded-full border border-amber-400/30">
-                    <i class="fa-solid fa-cross text-amber-400"></i>
-                    <span class="text-sm tracking-[2px] uppercase font-medium text-amber-400">Sacred Reflections</span>
-                </div>
-                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-6">
-                    Confessions
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-6 text-amber-300">
+                    Sacred Reflections
                 </h1>
-                <p class="text-2xl text-white/80 max-w-3xl mx-auto mb-4">
-                    Poetic reflections from the valley where suffering meets maturity and hope is born.
-                </p>
-                <p class="text-lg text-amber-400/90 max-w-2xl mx-auto italic">
-                    “...suffering produces perseverance; perseverance, character; and character, hope.”<br>
-                    — Romans 5:3-5
+                <p class="text-2xl text-white/80 max-w-3xl mx-auto">
+                    Honest, unpolished confessions written in the middle of real life.<br>
+                    Trials that refine us. Pain that produces hope.
                 </p>
             </div>
 
-            <!-- Intro -->
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <p class="text-lg text-white/80 leading-relaxed">
-                    These are not polished performances. They are honest pages from the diary of a soul being refined—where the weight of trials, the quiet ache of waiting, and the daily surrender become the very soil in which God grows deeper roots, steadier faith, and a hope that will never put us to shame. 
-                    Here suffering is not wasted. It is the narrow path that leads to the heart of the Father.
-                </p>
+            <!-- Open Hands -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Open Hands</h3>
+                    <p class="text-amber-400 text-sm">Written by Ruby • June 4, 2026 • Narrated by Anna</p>
+                </div>
+                <audio controls class="w-full mb-6">
+                    <source src="Open_Hand.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="showPoetry('open-hands')" 
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> 
+                    <span>Show Poetry</span>
+                </button>
             </div>
 
-            <!-- Featured / Top Poem: Open Hands -->
-            <div class="max-w-4xl mx-auto mb-12">
-                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card" id="featured-item">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold accent-gold">Open Hands</h3>
-                            <p class="text-sm text-amber-400 mt-1">Written June 4, 2026 • Narrated by Anna</p>
-                        </div>
-                    </div>
-                    
-                    <audio controls class="w-full mb-8">
-                        <source src="Open_Hand.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    
-                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
-                        <p class="poem-line">I tried to make it easy for everyone.</p>
-                        <p class="poem-line">Carried their burdens with open hands,</p>
-                        <p class="poem-line">Smiled through the weight.</p>
-                        <p class="poem-line mt-6">Then one day I noticed</p>
-                        <p class="poem-line">No one was carrying mine.</p>
-                        <p class="poem-line">My own light was quietly fading</p>
-                        <p class="poem-line">While I stayed busy lighting the way for others.</p>
-                        <p class="poem-line mt-6">This isn’t bitterness.</p>
-                        <p class="poem-line">It’s just clarity.</p>
-                        <p class="poem-line">I’m learning softly</p>
-                        <p class="poem-line">That it’s okay to want someone to notice</p>
-                        <p class="poem-line">When I’m drowning,</p>
-                        <p class="poem-line">To care enough to reach out a hand.</p>
-                        <p class="poem-line mt-6">I’m still here with love to give.</p>
-                    </div>
-                    <p class="text-right mt-8 text-sm text-amber-400">— Written by Ruby</p>
+            <!-- Receipts, Not Stages -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Receipts, Not Stages</h3>
+                    <p class="text-amber-400 text-sm">Written by Ruby • June 6, 2026 • Narrated by Anna</p>
                 </div>
+                <audio controls class="w-full mb-6">
+                    <source src="Receipt_Not_Stages.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="showPoetry('receipts-not-stages')" 
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> 
+                    <span>Show Poetry</span>
+                </button>
             </div>
 
-            <!-- Poem 2: Receipts, Not Stages -->
-            <div class="max-w-4xl mx-auto mb-10">
-                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold accent-gold">Receipts, Not Stages</h3>
-                            <p class="text-sm text-amber-400 mt-1">Written June 6, 2026 • Narrated by Anna</p>
-                        </div>
-                    </div>
-
-                    <audio controls class="w-full mb-8">
-                        <source src="Receipt_Not_Stages.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    
-                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
-                        <p class="poem-line">I spent years auditioning for love,</p>
-                        <p class="poem-line">Reading lines I was never meant to win —</p>
-                        <p class="poem-line">Not because I was unworthy,</p>
-                        <p class="poem-line">But because love was never a stage,</p>
-                        <p class="poem-line">And I was the only one keeping score.</p>
-                        <p class="poem-line mt-6">I’m done begging for receipts.</p>
-                        <p class="poem-line">Done measuring my worth by how many people forget to say “thank you.”</p>
-                        <p class="poem-line">I still serve,</p>
-                        <p class="poem-line">Because kindness still lives in these hands.</p>
-                        <p class="poem-line">But I no longer pour from my cup just to be loved in return.</p>
-                        <p class="poem-line">I give because she’s still alive in me,</p>
-                        <p class="poem-line">And I refuse to starve her</p>
-                        <p class="poem-line">Simply because no one else is hungry.</p>
-                        <p class="poem-line mt-6">They can treat me like a servant.</p>
-                        <p class="poem-line">They can forget.</p>
-                        <p class="poem-line">They can act like I owe them my breath.</p>
-                        <p class="poem-line">But I see it clearly now,</p>
-                        <p class="poem-line">And I am brave enough to say:</p>
-                        <p class="poem-line">I don’t deserve that.</p>
-                        <p class="poem-line mt-6">Not because I am perfect,</p>
-                        <p class="poem-line">Not because I am better,</p>
-                        <p class="poem-line">But because no one — No one —</p>
-                        <p class="poem-line">Deserves to be erased while they’re still standing right in front of you.</p>
-                        <p class="poem-line">My heart is quiet now, but it isn’t gone.</p>
-                        <p class="poem-line">And for the first time,</p>
-                        <p class="poem-line">I am not waiting for someone else to notice that I’m still here.</p>
-                        <p class="poem-line">I notice.</p>
-                        <p class="poem-line">And that is enough.</p>
-                    </div>
-                    <p class="text-right mt-8 text-sm text-amber-400">— Written by Ruby</p>
+            <!-- Wineglass on Concrete -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-12">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Wineglass on Concrete</h3>
+                    <p class="text-amber-400 text-sm">Written by Ruby • June 7, 2026 • Narrated by Anna</p>
                 </div>
+                <audio controls class="w-full mb-6">
+                    <source src="Wineglass_Concrete.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="showPoetry('wineglass-on-concrete')" 
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> 
+                    <span>Show Poetry</span>
+                </button>
             </div>
 
-            <!-- Poem 3: Wineglass on Concrete -->
-            <div class="max-w-4xl mx-auto mb-10">
-                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold accent-gold">Wineglass on Concrete</h3>
-                            <p class="text-sm text-amber-400 mt-1">Written June 7, 2026 • Narrated by Anna</p>
-                        </div>
-                    </div>
+            <p class="text-center text-amber-300 italic text-lg">
+                More confessions coming soon — God willing.
+            </p>
+        </div>
+    </div>
 
-                    <audio controls class="w-full mb-8">
-                        <source src="Wineglass_Concrete.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    
-                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
-                        <p class="poem-line">There will be times that shatter you</p>
-                        <p class="poem-line">Like fine glass of wine crashing on cold concrete.</p>
-                        <p class="poem-line">Your heart scattered,</p>
-                        <p class="poem-line">Sharp pieces no one can mend.</p>
-                        <p class="poem-line">Why this pain?</p>
-                        <p class="poem-line">Why me?</p>
-                        <p class="poem-line mt-6">But listen —</p>
-                        <p class="poem-line">Good souls receive hard seasons on purpose.</p>
-                        <p class="poem-line">The breaking isn’t the end.</p>
-                        <p class="poem-line">Your shards will catch new light,</p>
-                        <p class="poem-line">Turning into something stronger,</p>
-                        <p class="poem-line">Something whole.</p>
-                        <p class="poem-line">You are becoming.</p>
-                        <p class="poem-line">Healing rises from the crack.</p>
-                        <p class="poem-line">You will rise</p>
-                        <p class="poem-line">Beautiful.</p>
-                        <p class="poem-line">Resilient.</p>
-                        <p class="poem-line">Whole.</p>
-                    </div>
-                    <p class="text-right mt-8 text-sm text-amber-400">— Written by Ruby</p>
+    <!-- Poetry Modal -->
+    <div id="poetry-modal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-amber-400/30 flex justify-between items-center">
+                <div>
+                    <h3 id="modal-title" class="text-2xl font-semibold"></h3>
+                    <p id="modal-meta" class="text-amber-400 text-sm mt-1"></p>
                 </div>
+                <button onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400 px-2">&times;</button>
             </div>
-
-            <!-- Closing Reflection -->
-            <div class="max-w-3xl mx-auto mt-12 text-center">
-                <div class="border-t border-amber-400/20 pt-8">
-                    <p class="text-white/70 italic text-lg leading-relaxed">
-                        These confessions are offered in the hope that you, too, might find permission to be honest in your valley—<br>
-                        and in that honesty, discover the same faithful Refiner who turns every sorrow into seed for deeper joy.
-                    </p>
-                    <p class="mt-6 text-amber-400 text-sm tracking-widest">ALL GLORY TO GOD THE FATHER • THROUGH CHRIST OUR LORD</p>
-                </div>
+            <div id="modal-body" class="p-8 md:p-10 max-h-[65vh] overflow-auto text-white/90 leading-relaxed text-lg whitespace-pre-wrap">
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10 bg-zinc-950">
-        © 2026 Spoken Devotion Confessions • ruby@spokendevotion.com<br>
-        <span class="text-xs text-white/40">Words that heal, lift, and draw us near to God.</span>
+    <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
+        © 2026 Spoken Devotion • All glory to God the Father
     </footer>
+
+    <script>
+        let confessionsCache = {};
+
+        async function showPoetry(id) {
+            const modal = document.getElementById('poetry-modal');
+            const body = document.getElementById('modal-body');
+            const titleEl = document.getElementById('modal-title');
+            const metaEl = document.getElementById('modal-meta');
+
+            try {
+                if (Object.keys(confessionsCache).length === 0) {
+                    const response = await fetch('confessions.json');
+                    confessionsCache = await response.json();
+                }
+
+                const item = confessionsCache[id];
+                if (!item) {
+                    body.innerHTML = `<p class="text-red-400">Poetry not found.</p>`;
+                } else {
+                    titleEl.textContent = item.title;
+                    metaEl.textContent = `${item.written} • ${item.narrated}`;
+                    body.innerHTML = `<p>${item.text}</p>`;
+                }
+                modal.style.display = 'flex';
+            } catch (err) {
+                console.error(err);
+                body.innerHTML = `<p class="text-red-400">Error loading poetry. Please try again.</p>`;
+                modal.style.display = 'flex';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('poetry-modal').style.display = 'none';
+        }
+
+        // Close when clicking outside
+        document.getElementById('poetry-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('poetry-modal');
+                if (modal.style.display === 'flex') closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
