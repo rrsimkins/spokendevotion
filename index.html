@@ -20,7 +20,6 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-x-4">
-                <!-- Logo -->
                 <img src="logo.png" alt="Spoken Devotion" class="h-12 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
@@ -40,14 +39,13 @@
     <div class="min-h-screen pt-20 flex items-center devotion-bg relative">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="flex justify-center mb-8 md:mb-12">
-                <!-- Large Logo -->
                 <img src="logo.png" alt="Spoken Devotion Logo" class="h-48 md:h-64 w-auto drop-shadow-2xl">
             </div>
             <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-8">
                 Spoken words that heal,<br>lift, and draw us near to God.
             </h1>
             <p class="text-xl text-white/80 max-w-2xl mx-auto mb-12">
-                Emotional strength through spoken poetry, worship, prayer, and Scripture. 
+                Emotional strength through spoken poetry, worship, prayer, and Scripture.<br>
                 Honoring Christ and God the Father in every word.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -57,12 +55,12 @@
         </div>
     </div>
 
-    <!-- About / Mission -->
+    <!-- Our Heart -->
     <div class="max-w-5xl mx-auto px-6 py-20">
         <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-4">Our Heart</h2>
             <p class="text-lg text-white/70 max-w-3xl mx-auto">
-                Spoken Devotion exists to bring comfort, strength, and hope through the power of spoken words. 
+                Spoken Devotion exists to bring comfort, strength, and hope through the power of spoken words.<br>
                 In a world full of noise, we offer moments of peace — words that point hearts back to Jesus.
             </p>
         </div>
@@ -86,7 +84,7 @@
         </div>
     </div>
 
-<!-- Featured from Confessions -->
+    <!-- Featured from Confessions -->
     <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10">
         <div class="flex justify-between items-end mb-8">
             <div>
@@ -98,7 +96,7 @@
             </a>
         </div>
         <div id="featured-confessions" class="max-w-4xl">
-            <!-- Automatically pulled from Confessions page -->
+            <!-- Dynamically loaded -->
         </div>
         <a href="confessions/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Confessions <i class="fa-solid fa-arrow-right"></i>
@@ -117,7 +115,7 @@
             </a>
         </div>
         <div id="featured-worship" class="max-w-4xl">
-            <!-- Automatically pulled from Worship page -->
+            <!-- Dynamically loaded -->
         </div>
         <a href="worship/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Worship <i class="fa-solid fa-arrow-right"></i>
@@ -136,7 +134,7 @@
             </a>
         </div>
         <div id="featured-prayer" class="max-w-4xl">
-            <!-- Automatically pulled from Prayer page -->
+            <!-- Dynamically loaded -->
         </div>
         <a href="prayer/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Prayers <i class="fa-solid fa-arrow-right"></i>
@@ -197,70 +195,67 @@
         </div>
     </footer>
 
-<!-- JavaScript for pulling featured content (UPDATED) -->
-<script>
-async function loadFeatured(pageUrl, targetId, pageName, folderPrefix) {
-    try {
-        const response = await fetch(pageUrl);
-        const htmlText = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, 'text/html');
-        
-        // Try to find #featured-item first, otherwise grab the first card
-        let featured = doc.getElementById('featured-item');
-        if (!featured) {
-            featured = doc.querySelector('.bg-zinc-900, .bg-zinc-900\\/80');
-        }
-        
-        if (featured) {
-            // Fix audio source paths (prepend folder prefix)
-            const sources = featured.querySelectorAll('audio source');
-            sources.forEach(source => {
-                const currentSrc = source.getAttribute('src');
-                if (currentSrc && !currentSrc.includes('/')) {
-                    source.setAttribute('src', folderPrefix + currentSrc);
+    <!-- JavaScript for Featured Content -->
+    <script>
+        async function loadFeatured(pageUrl, targetId, pageName, folderPrefix) {
+            try {
+                const response = await fetch(pageUrl);
+                const htmlText = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                let featured = doc.getElementById('featured-item');
+                if (!featured) {
+                    featured = doc.querySelector('.bg-zinc-900, .bg-zinc-900\\/80');
                 }
-            });
+                
+                if (featured) {
+                    // Fix audio source paths
+                    const sources = featured.querySelectorAll('audio source');
+                    sources.forEach(source => {
+                        const currentSrc = source.getAttribute('src');
+                        if (currentSrc && !currentSrc.includes('/')) {
+                            source.setAttribute('src', folderPrefix + currentSrc);
+                        }
+                    });
 
-            // Remove "Show Lyrics / Show Poetry / Show Prayer" buttons (they won't work on homepage)
-            const actionButtons = featured.querySelectorAll('button');
-            actionButtons.forEach(btn => {
-                if (btn.textContent.toLowerCase().includes('show') || 
-                    btn.textContent.toLowerCase().includes('lyrics') || 
-                    btn.textContent.toLowerCase().includes('poetry') || 
-                    btn.textContent.toLowerCase().includes('prayer')) {
-                    btn.remove();
+                    // Remove "Show" buttons (they only work on full pages)
+                    const buttons = featured.querySelectorAll('button');
+                    buttons.forEach(btn => {
+                        const text = btn.textContent.toLowerCase();
+                        if (text.includes('show') || text.includes('lyrics') || text.includes('poetry') || text.includes('prayer')) {
+                            btn.remove();
+                        }
+                    });
+
+                    const container = document.getElementById(targetId);
+                    container.innerHTML = featured.outerHTML;
+
+                    // Add "View full page" button
+                    const card = container.querySelector('.bg-zinc-900, .bg-zinc-900\\/80, [id="featured-item"]');
+                    if (card) {
+                        const btnDiv = document.createElement('div');
+                        btnDiv.className = 'mt-6 text-center';
+                        btnDiv.innerHTML = `
+                            <a href="${pageUrl}" 
+                               class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all">
+                                <i class="fa-solid fa-arrow-right"></i> 
+                                View full ${pageName} page
+                            </a>
+                        `;
+                        card.appendChild(btnDiv);
+                    }
                 }
-            });
-
-            const container = document.getElementById(targetId);
-            container.innerHTML = featured.outerHTML;
-            
-            // Add "View full page" button
-            const card = container.querySelector('.bg-zinc-900, .bg-zinc-900\\/80, [id="featured-item"]');
-            if (card) {
-                const btnDiv = document.createElement('div');
-                btnDiv.className = 'mt-6 text-center';
-                btnDiv.innerHTML = `
-                    <a href="${pageUrl}" 
-                       class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all">
-                        <i class="fa-solid fa-arrow-right"></i> 
-                        View full ${pageName} page
-                    </a>
-                `;
-                card.appendChild(btnDiv);
+            } catch (error) {
+                console.log('Could not load featured content from ' + pageUrl);
             }
         }
-    } catch (error) {
-        console.log('Could not load featured content from ' + pageUrl);
-    }
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    loadFeatured('confessions/', 'featured-confessions', 'Confessions', 'confessions/');
-    loadFeatured('worship/', 'featured-worship', 'Worship', 'worship/');
-    loadFeatured('prayer/', 'featured-prayer', 'Prayer', 'prayer/');
-});
-</script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeatured('confessions/', 'featured-confessions', 'Confessions', 'confessions/');
+            loadFeatured('worship/', 'featured-worship', 'Worship', 'worship/');
+            loadFeatured('prayer/', 'featured-prayer', 'Prayer', 'prayer/');
+        });
+    </script>
 </body>
 </html>
