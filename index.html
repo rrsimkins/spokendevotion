@@ -199,7 +199,7 @@
 
 <!-- JavaScript for pulling featured content (UPDATED) -->
 <script>
-async function loadFeatured(pageUrl, targetId, pageName) {
+async function loadFeatured(pageUrl, targetId, pageName, folderPrefix) {
     try {
         const response = await fetch(pageUrl);
         const htmlText = await response.text();
@@ -213,10 +213,26 @@ async function loadFeatured(pageUrl, targetId, pageName) {
         }
         
         if (featured) {
-            // Remove audio players
-            const audioElements = featured.querySelectorAll('audio');
-            audioElements.forEach(audio => audio.remove());
-            
+            // Fix audio source paths (prepend folder prefix)
+            const sources = featured.querySelectorAll('audio source');
+            sources.forEach(source => {
+                const currentSrc = source.getAttribute('src');
+                if (currentSrc && !currentSrc.includes('/')) {
+                    source.setAttribute('src', folderPrefix + currentSrc);
+                }
+            });
+
+            // Remove "Show Lyrics / Show Poetry / Show Prayer" buttons (they won't work on homepage)
+            const actionButtons = featured.querySelectorAll('button');
+            actionButtons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes('show') || 
+                    btn.textContent.toLowerCase().includes('lyrics') || 
+                    btn.textContent.toLowerCase().includes('poetry') || 
+                    btn.textContent.toLowerCase().includes('prayer')) {
+                    btn.remove();
+                }
+            });
+
             const container = document.getElementById(targetId);
             container.innerHTML = featured.outerHTML;
             
@@ -241,9 +257,9 @@ async function loadFeatured(pageUrl, targetId, pageName) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadFeatured('confessions/', 'featured-confessions', 'Confessions');
-    loadFeatured('worship/', 'featured-worship', 'Worship');
-    loadFeatured('prayer/', 'featured-prayer', 'Prayer');
+    loadFeatured('confessions/', 'featured-confessions', 'Confessions', 'confessions/');
+    loadFeatured('worship/', 'featured-worship', 'Worship', 'worship/');
+    loadFeatured('prayer/', 'featured-prayer', 'Prayer', 'prayer/');
 });
 </script>
 </body>
