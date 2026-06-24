@@ -53,14 +53,24 @@
     width: 100%;
     line-height: 0;
     text-align: center;
+    /* Full-width band — sides fill to page margins; image stays centered, never stretched */
+    background: linear-gradient(
+        90deg,
+        #0f172a 0%,
+        #1e2937 18%,
+        #1e2937 82%,
+        #0f172a 100%
+    );
 }
 .page-banner--home .home-banner__img {
-    width: 75%;
-    max-width: 75%;
+    /* 75% previous size, minus another 25% ≈ 56% of page width */
+    width: 56%;
+    max-width: 56%;
     height: auto;
     display: inline-block;
     vertical-align: top;
     min-width: 0;
+    object-fit: contain;
 }
 .page-banner--home .page-banner__content {
     padding: 2.5rem 1.5rem 0;
