@@ -63,9 +63,8 @@
     );
 }
 .page-banner--home .home-banner__img {
-    /* 75% previous size, minus another 25% ≈ 56% of page width */
-    width: 56%;
-    max-width: 56%;
+    width: 50%;
+    max-width: 50%;
     height: auto;
     display: inline-block;
     vertical-align: top;
