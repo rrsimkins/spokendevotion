@@ -12,6 +12,8 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 
 → [spokendevotion.com](https://spokendevotion.com/)
 
+**DNS note:** For `www.spokendevotion.com` to work, add a CNAME record at your domain registrar pointing `www` to `awsimkins.github.io`. The apex domain (`spokendevotion.com`) is configured via the repo `CNAME` file.
+
 ## Current Site Sections
 
 | Section       | Description                                      | Link |
@@ -20,16 +22,17 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 | **Worship**   | Original worship songs with lyrics in modal      | [Worship](https://spokendevotion.com/worship/) |
 | **Prayer**    | Written & spoken prayers with full text modals   | [Prayer](https://spokendevotion.com/prayer/) |
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
-| **Bible**     | Spoken Devotion Version (SDV) — audio Scripture with full book list and James narration | [Bible](https://spokendevotion.com/bible/) |
+| **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
+| **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
 
 ## Key Features
 
 - **Playable audio** directly on the homepage featured sections
-- **Download MP3** buttons on all audio content
-- **Share buttons** — one-click copy of direct MP3 links
+- **Share buttons** — one-click copy of direct audio links
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
-- **James narration** with video embed in the Bible section
+- **Book of James** available via YouTube video embed in the Bible section
 - Clean, responsive design built with Tailwind CSS
+- Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`lyrics.json`, `confessions.json`, `prayer.json`)
 
 ## Platforms
