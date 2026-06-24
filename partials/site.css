@@ -38,41 +38,32 @@
     align-items: center;
 }
 .page-banner--home {
-    /* main.png is 880×288 — size the banner to the image's true aspect ratio */
-    --home-banner-img-height: calc(100vw * 288 / 880);
-    min-height: calc(6rem + var(--home-banner-img-height) + 12rem);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    overflow: visible;
+    min-height: auto;
+    display: block;
     padding-top: 6rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 @media (min-width: 768px) {
     .page-banner--home {
-        min-height: calc(6rem + var(--home-banner-img-height) + 14rem);
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
     }
 }
-.page-banner--home .page-banner__fallback,
-.page-banner--home .page-banner__image,
-.page-banner--home .page-banner__overlay {
-    top: 6rem;
-    bottom: auto;
-    height: var(--home-banner-img-height);
+.home-banner__media {
+    width: 100%;
+    line-height: 0;
 }
-.page-banner--home .page-banner__image {
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
+.home-banner__img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .page-banner--home .page-banner__content {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2.5rem 1.5rem 0;
 }
 @media (min-width: 768px) {
     .page-banner--home .page-banner__content {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding: 3rem 1.5rem 0;
     }
 }
 .page-banner__fallback,
