@@ -74,12 +74,28 @@
     );
 }
 /*
- * Worship banner (worship.png 1280×599) — full photo, no crop.
- * Uses a real <img> so the banner height always matches the image.
+ * Worship banner — full photo scaled to 50% width (no crop).
+ * Frame keeps overlay/text aligned to the image, not the full viewport.
  */
 .page-banner--worship {
     margin-top: 6rem;
-    display: block;
+    padding-top: 0.5rem;
+    text-align: center;
+    background: #09090b;
+    line-height: 0;
+}
+@media (max-width: 767px) {
+    .page-banner--worship {
+        margin-top: 7rem;
+        padding-top: 0.75rem;
+    }
+}
+.page-banner__worship-frame {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    max-width: 50%;
+    vertical-align: top;
     line-height: 0;
 }
 .page-banner--worship .page-banner__photo {
@@ -88,7 +104,7 @@
     display: block;
     vertical-align: top;
 }
-.page-banner--worship .page-banner__overlay {
+.page-banner__worship-frame .page-banner__overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
@@ -98,7 +114,7 @@
         rgba(9, 9, 11, 0.72) 100%
     );
 }
-.page-banner--worship .page-banner__content {
+.page-banner__worship-frame .page-banner__content {
     position: absolute;
     inset: 0;
     z-index: 10;
@@ -107,7 +123,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
     line-height: normal;
 }
@@ -140,6 +156,25 @@
 @media (min-width: 768px) {
     .page-banner__content p {
         font-size: 1.625rem;
+    }
+}
+/* Slightly smaller type when worship banner is at 50% width */
+.page-banner__worship-frame .page-banner__content h1 {
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+    .page-banner__worship-frame .page-banner__content h1 {
+        font-size: 2.75rem;
+        margin-bottom: 1rem;
+    }
+}
+.page-banner__worship-frame .page-banner__content p {
+    font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+    .page-banner__worship-frame .page-banner__content p {
+        font-size: 1.125rem;
     }
 }
 
