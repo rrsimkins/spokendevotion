@@ -18,14 +18,17 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%);
 }
 
-/* Page banner */
+/* Page banner — sits below fixed nav (h-24 / 6rem) */
 .page-banner {
     position: relative;
     overflow: hidden;
-    padding-top: 6rem;
+    margin-top: 6rem;
 }
 .page-banner--standard {
     min-height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (min-width: 768px) {
     .page-banner--standard {
@@ -33,9 +36,10 @@
     }
 }
 .page-banner--tall {
-    min-height: 100vh;
+    min-height: calc(100vh - 6rem);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .page-banner__fallback,
 .page-banner__image,
@@ -73,11 +77,32 @@
     position: relative;
     z-index: 10;
     width: 100%;
-    padding: 3rem 1.5rem 4rem;
+    padding: 1.5rem;
     text-align: center;
 }
 .page-banner--tall .page-banner__content {
-    padding: 2rem 1.5rem 4rem;
+    padding: 2rem 1.5rem;
+}
+/* Shared banner typography — overrides per-page Tailwind text-* on h1/p */
+.page-banner__content h1 {
+    font-size: 2.75rem;
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+    .page-banner__content h1 {
+        font-size: 4.5rem;
+        margin-bottom: 1.75rem;
+    }
+}
+.page-banner__content p {
+    font-size: 1.25rem;
+    line-height: 1.55;
+}
+@media (min-width: 768px) {
+    .page-banner__content p {
+        font-size: 1.625rem;
+    }
 }
 
 /* Audio / content cards — amber border (matches Prayer page) */
