@@ -11,8 +11,6 @@
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
         .worship-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
-        .accent-gold { color: #fbbf24; }
-        
         .modal {
             display: none;
             position: fixed;
@@ -194,7 +192,7 @@
             document.getElementById('lyrics-modal').style.display = 'none';
         }
 
-        // Share function - copies direct MP3 link
+        // Share function
         function shareAudio(filename, title) {
             const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
             const fullUrl = `${baseUrl}/${filename}`;
@@ -206,7 +204,6 @@
             });
         }
 
-        // Toast notification
         function showToast(message) {
             const toast = document.getElementById('toast');
             const text = document.getElementById('toast-text');
