@@ -40,12 +40,18 @@
 .page-banner--home {
     min-height: 50vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 7.5rem;
 }
 @media (min-width: 768px) {
     .page-banner--home {
         min-height: 50vh;
+        padding-top: 8rem;
     }
+}
+.page-banner--home .page-banner__content {
+    padding-top: 2rem;
 }
 .page-banner__fallback,
 .page-banner__image,
