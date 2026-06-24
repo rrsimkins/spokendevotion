@@ -1,3 +1,11 @@
+/* Base typography — nav partial uses .heading-font after injection */
+body {
+    font-family: 'Poppins', system_ui, sans-serif;
+}
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
 /* Fallback banner gradients (used when /images/*.png is missing) */
 .devotion-bg {
     background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%);
@@ -173,4 +181,43 @@
 }
 .contact-modal.is-open .contact-modal__content {
     transform: translateY(0) scale(1);
+}
+
+/* Content modals — lyrics, prayer, poetry, James video */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.88);
+}
+.modal-content {
+    background: #18181b;
+    width: 100%;
+    max-width: 720px;
+    max-height: 85vh;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #fbbf24;
+}
+.modal-content--wide {
+    max-width: 900px;
+}
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #27251f;
+    color: #fbbf24;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    gap: 8px;
 }

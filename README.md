@@ -18,23 +18,35 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 
 | Section       | Description                                      | Link |
 |---------------|--------------------------------------------------|------|
-| **Home**      | Featured content, mission, and quick access to audio | [Home](https://spokendevotion.com/) |
+| **Home**      | Mission, Scripture highlight, and social links   | [Home](https://spokendevotion.com/) |
 | **Worship**   | Original worship songs with lyrics in modal      | [Worship](https://spokendevotion.com/worship/) |
 | **Prayer**    | Written & spoken prayers with full text modals   | [Prayer](https://spokendevotion.com/prayer/) |
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Contact**     | Contact form via Web3Forms (add access key in config)  | [Contact](https://spokendevotion.com/contact/) |
+| **Contact**     | Contact form via Web3Forms                       | [Contact](https://spokendevotion.com/contact/) |
 
 ## Key Features
 
-- **Playable audio** directly on the homepage featured sections
 - **Share buttons** — one-click copy of direct audio links
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`lyrics.json`, `confessions.json`, `prayer.json`)
+
+## Banner images
+
+Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect). Naming matches the section folder where possible:
+
+| File | Page |
+|------|------|
+| `main.png` | Home, Contact |
+| `worship.png` | Worship |
+| `prayer.png` | Prayer |
+| `confession.png` | Confessions |
+| `bible.png` | Bible |
+| `instrumental.png` | Instrumental |
 
 ## Platforms
 
@@ -52,18 +64,16 @@ Coming soon (God willing):
 
 ## Contact
 
-Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Web3Forms](https://web3forms.com/) — set your access key in `partials/contact-config.js` and configure `contact@spokendevotion.com` as the notification email in the Web3Forms dashboard.
+Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Web3Forms](https://web3forms.com/) — access key in `partials/contact-config.js`; set `contact@spokendevotion.com` as the notification email in the Web3Forms dashboard.
 
 ## Still To Do
 
-See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items for the next session:
+See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
-- [ ] **Web3Forms access key** — replace `YOUR_WEB3FORMS_ACCESS_KEY` in `partials/contact-config.js`; set notification email to `contact@spokendevotion.com` and enable autoresponder in dashboard
 - [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge for now)
-- [ ] **Instrumental tracks** — add audio files and cards on `/instrumental/` when ready
+- [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo
-
-- [ ] **Page banners** — add remaining banner images (`worship.png`, `prayer.png`, `confessions.png`, `bible.png`, `instrumental.png`) under `/images/`
+- [ ] **Normalize banner dimensions** — resize any banners not yet at 1760×370
 
 ## Vision
 

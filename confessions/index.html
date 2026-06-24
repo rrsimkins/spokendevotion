@@ -13,63 +13,27 @@
     <meta property="og:title" content="Spoken Devotion • Confessions">
     <meta property="og:description" content="Honest spoken-word confessions and poetic reflections from Spoken Devotion.">
     <meta property="og:url" content="https://spokendevotion.com/confessions/">
-    <meta property="og:image" content="https://spokendevotion.com/images/logo.png">
+    <meta property="og:image" content="https://spokendevotion.com/images/confession.png">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css">
+    <link rel="stylesheet" href="/partials/site.css?v=12">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        body { font-family: 'Poppins', system_ui, sans-serif; }
-        .heading-font { font-family: 'Playfair Display', serif; }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-        .modal-content {
-            background: #18181b;
-            width: 100%;
-            max-width: 720px;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 1px solid #fbbf24;
-        }
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #27251f;
-            color: #fbbf24;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            gap: 8px;
-        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
     <div id="nav-root"></div>
 
-    <section class="page-banner page-banner--standard" data-banner="/images/confessions.png" data-fallback="confession-bg">
+    <section class="page-banner page-banner--standard" data-banner="/images/confession.png" data-fallback="confession-bg">
         <div class="page-banner__fallback"></div>
         <div class="page-banner__image"></div>
         <div class="page-banner__overlay"></div>
         <div class="page-banner__content max-w-5xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font leading-tight mb-6 text-amber-300">
+            <h1 class="font-semibold tracking-tighter heading-font leading-tight text-amber-300">
                 Sacred Reflections
             </h1>
-            <p class="text-2xl text-white/80 max-w-3xl mx-auto">
+            <p class="text-white/80 max-w-3xl mx-auto">
                 Honest, unpolished confessions written in the middle of real life.<br>
                 Trials that refine us. Pain that produces hope.
             </p>
@@ -143,17 +107,16 @@
             <p class="text-center text-amber-300 italic text-lg">
                 More confessions coming soon — God willing.
             </p>
-        </div>
     </div>
 
-    <div id="poetry-modal" class="modal">
+    <div id="poetry-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-content">
             <div class="p-6 border-b border-amber-400/30 flex justify-between items-center">
                 <div class="text-center flex-1">
                     <h3 id="modal-title" class="text-2xl font-semibold"></h3>
                     <p id="modal-meta" class="text-amber-400 text-sm mt-1"></p>
                 </div>
-                <button onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400 px-2">&times;</button>
+                <button type="button" onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400 px-2" aria-label="Close">&times;</button>
             </div>
             <div id="modal-body" class="p-8 md:p-10 max-h-[65vh] overflow-auto text-white/90 leading-relaxed text-lg whitespace-pre-wrap text-center"></div>
         </div>
@@ -166,7 +129,7 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/site.js"></script>
+    <script src="/partials/site.js?v=12"></script>
     <script>
         let confessionsCache = {};
 
@@ -177,25 +140,26 @@
             const metaEl = document.getElementById('modal-meta');
 
             try {
-                if (Object.keys(confessionsCache).length === 0) {
-                    const response = await fetch('confessions.json');
-                    confessionsCache = await response.json();
-                }
-
+                confessionsCache = await fetchJsonData('confessions.json', confessionsCache);
                 const item = confessionsCache[id];
+                if (!item || !item.title) {
+                    throw new Error('Poetry not found');
+                }
                 titleEl.textContent = item.title;
-                metaEl.textContent = item.written + ' • ' + item.narrated;
-                body.textContent = item.text;
-                modal.style.display = 'flex';
+                metaEl.textContent = (item.written || '') + (item.narrated ? ' • ' + item.narrated : '');
+                body.textContent = item.text || '';
+                openContentModal(modal);
             } catch (err) {
                 console.error(err);
+                titleEl.textContent = 'Poetry';
+                metaEl.textContent = '';
                 body.textContent = 'Error loading poetry. Please try again.';
-                modal.style.display = 'flex';
+                openContentModal(modal);
             }
         }
 
         function closeModal() {
-            document.getElementById('poetry-modal').style.display = 'none';
+            closeContentModal(document.getElementById('poetry-modal'));
         }
 
         document.getElementById('poetry-modal').addEventListener('click', function (e) {
