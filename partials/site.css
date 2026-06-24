@@ -38,36 +38,40 @@
     align-items: center;
 }
 .page-banner--home {
-    min-height: 72vh;
+    /* main.png is 880×288 — size the banner to the image's true aspect ratio */
+    --home-banner-img-height: calc(100vw * 288 / 880);
+    min-height: calc(6rem + var(--home-banner-img-height) + 12rem);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 @media (min-width: 768px) {
     .page-banner--home {
-        min-height: 76vh;
-        padding-top: 6rem;
-        padding-bottom: 4rem;
+        min-height: calc(6rem + var(--home-banner-img-height) + 14rem);
+        padding-bottom: 6rem;
     }
 }
 .page-banner--home .page-banner__fallback,
 .page-banner--home .page-banner__image,
 .page-banner--home .page-banner__overlay {
     top: 6rem;
-    bottom: 0;
+    bottom: auto;
+    height: var(--home-banner-img-height);
 }
 .page-banner--home .page-banner__image {
-    background-position: center 35%;
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 .page-banner--home .page-banner__content {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
     .page-banner--home .page-banner__content {
-        padding-top: 5rem;
+        padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
 }
