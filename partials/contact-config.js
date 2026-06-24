@@ -1,5 +1,5 @@
-// Replace YOUR_FORMSPREE_ID with your Formspree form ID (from formspree.io → form endpoint URL).
-// Example: if your endpoint is https://formspree.io/f/abcxyz12, set formspreeId to 'abcxyz12'
+// Web3Forms access key — get yours at https://web3forms.com
+// In the Web3Forms dashboard, set the notification email to: contact@spokendevotion.com
 window.SD_CONTACT = {
-    formspreeId: 'YOUR_FORMSPREE_ID'
+    accessKey: 'YOUR_WEB3FORMS_ACCESS_KEY'
 };

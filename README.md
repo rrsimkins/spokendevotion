@@ -24,7 +24,7 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Contact**     | Contact form via Formspree (add form ID in config)  | [Contact](https://spokendevotion.com/contact/) |
+| **Contact**     | Contact form via Web3Forms (add access key in config)  | [Contact](https://spokendevotion.com/contact/) |
 
 ## Key Features
 
@@ -39,30 +39,30 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 ## Platforms
 
 Active on:
-- TikTok
-- Facebook
-- Instagram
-- X (Twitter)
-- YouTube
+- [YouTube](https://www.youtube.com/@Spoken_Devotion)
+- [Instagram](https://www.instagram.com/spoken_devotion/)
+- [Facebook](https://www.facebook.com/profile.php?id=61591326358064)
 
 Coming soon (God willing):
+- TikTok
+- X (Twitter)
 - Spotify
 - Apple Music
 - Other streaming platforms
 
 ## Contact
 
-Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Formspree](https://formspree.io/) — set your form ID in `partials/contact-config.js` (`formspreeId: 'your-id-here'`).
+Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Web3Forms](https://web3forms.com/) — set your access key in `partials/contact-config.js` and configure `contact@spokendevotion.com` as the notification email in the Web3Forms dashboard.
 
 ## Still To Do
 
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items for the next session:
 
-- [ ] **Formspree form ID** — replace `YOUR_FORMSPREE_ID` in `partials/contact-config.js` with your Formspree form ID (create form at formspree.io, set notification email to `ruby@spokendevotion.com`)
-- [ ] **Social media links** — homepage Connect section icons still point to `#`; add real TikTok, Facebook, Instagram, X, and YouTube profile URLs in `index.html`
+- [ ] **Web3Forms access key** — replace `YOUR_WEB3FORMS_ACCESS_KEY` in `partials/contact-config.js`; set notification email to `contact@spokendevotion.com` and enable autoresponder in dashboard
+- [ ] **TikTok & X links** — add profile URLs when accounts are ready (homepage shows Coming Soon badges for now)
 - [ ] **Instrumental tracks** — add audio files and cards on `/instrumental/` when ready
 - [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo
-- [ ] **www DNS** — add CNAME for `www.spokendevotion.com` → `awsimkins.github.io`
+
 - [ ] **Page banners** — add remaining banner images (`worship.png`, `prayer.png`, `confessions.png`, `bible.png`, `instrumental.png`) under `/images/`
 
 ## Vision

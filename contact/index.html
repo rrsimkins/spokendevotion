@@ -36,6 +36,13 @@
             border-color: rgba(251, 191, 36, 0.6);
         }
         .form-input::placeholder { color: rgba(255, 255, 255, 0.4); }
+        .form-checkbox {
+            width: 1.125rem;
+            height: 1.125rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+            accent-color: #fbbf24;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -101,11 +108,20 @@
                     <input type="tel" id="phone" name="phone" autocomplete="tel" class="form-input" placeholder="If you would like a call back">
                 </div>
 
-                <!-- Honeypot — hidden from users, catches bots (Formspree _gotcha) -->
-                <div class="hidden" aria-hidden="true">
-                    <label for="gotcha">Leave blank</label>
-                    <input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                <div class="mb-6 p-4 rounded-xl border border-amber-400/25 bg-zinc-900/60">
+                    <label for="wants-response" class="flex items-start gap-3 cursor-pointer">
+                        <input type="checkbox" id="wants-response" name="wants_response" value="yes" class="form-checkbox">
+                        <span>
+                            <span class="block text-sm font-medium text-white/90">I would like an official response</span>
+                            <span class="block text-xs text-white/50 mt-2 leading-relaxed">
+                                We read every message and will do our best to reply when we can. Because we are a small ministry team and often busy creating content, a personal response is not guaranteed — but please know your message still matters deeply to us.
+                            </span>
+                        </span>
+                    </label>
                 </div>
+
+                <!-- Web3Forms spam honeypot — hidden from users -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
 
                 <p id="form-error" class="hidden text-red-400 text-sm mb-4" role="alert"></p>
 
@@ -114,11 +130,25 @@
                     <i class="fa-solid fa-paper-plane"></i> Send Message
                 </button>
             </form>
+        </div>
+    </div>
 
-            <div id="form-success" class="hidden text-center py-8">
-                <i class="fa-solid fa-circle-check text-4xl text-amber-400 mb-4"></i>
-                <h2 class="text-2xl font-semibold heading-font mb-2">Thank You</h2>
-                <p class="text-white/70 text-sm">Your message has been received. We will be in touch soon.</p>
+    <!-- Thank You Popup -->
+    <div id="thank-you-modal" class="contact-modal hidden" role="dialog" aria-modal="true" aria-labelledby="thank-you-title">
+        <div class="contact-modal__content">
+            <div class="text-center">
+                <i class="fa-solid fa-circle-check text-5xl text-amber-400 mb-5"></i>
+                <h2 id="thank-you-title" class="text-2xl md:text-3xl font-semibold heading-font mb-3">Thank You!</h2>
+                <p class="text-white/80 text-sm leading-relaxed mb-3">
+                    Your message has been received. We are grateful you reached out.
+                </p>
+                <p class="text-white/60 text-xs leading-relaxed mb-6">
+                    A confirmation email has been sent to your inbox. We are a busy ministry team, but we will do our best to read and respond in a timely way when we can.
+                </p>
+                <button type="button" onclick="closeThankYouModal()"
+                        class="inline-flex items-center justify-center gap-x-2 px-8 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-check"></i> Close
+                </button>
             </div>
         </div>
     </div>
