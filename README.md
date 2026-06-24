@@ -24,6 +24,7 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
+| **Contact**     | Contact form (webform integration pending)         | [Contact](https://spokendevotion.com/contact/) |
 
 ## Key Features
 
@@ -51,7 +52,18 @@ Coming soon (God willing):
 
 ## Contact
 
-**ruby@spokendevotion.com**
+Use the [Contact Us](https://spokendevotion.com/contact/) page — the form is ready for visitors; backend delivery is not wired up yet.
+
+## Still To Do
+
+See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items for the next session:
+
+- [ ] **Contact form backend** — connect `/contact/` form `action` to a webform service (Formspree, Netlify Forms, etc.) so submissions reach `ruby@spokendevotion.com` without exposing the address on the site
+- [ ] **Social media links** — homepage Connect section icons still point to `#`; add real TikTok, Facebook, Instagram, X, and YouTube profile URLs in `index.html`
+- [ ] **Instrumental tracks** — add audio files and cards on `/instrumental/` when ready
+- [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo
+- [ ] **www DNS** — add CNAME for `www.spokendevotion.com` → `awsimkins.github.io`
+- [ ] **Page banners** — add remaining banner images (`worship.png`, `prayer.png`, `confessions.png`, `bible.png`, `instrumental.png`) under `/images/`
 
 ## Vision
 
