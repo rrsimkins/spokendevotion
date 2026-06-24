@@ -40,11 +40,11 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 
 Active on:
 - [YouTube](https://www.youtube.com/@Spoken_Devotion)
+- [TikTok](https://www.tiktok.com/@spoken.devotion)
 - [Instagram](https://www.instagram.com/spoken_devotion/)
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064)
 
 Coming soon (God willing):
-- TikTok
 - X (Twitter)
 - Spotify
 - Apple Music
@@ -59,7 +59,7 @@ Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items for the next session:
 
 - [ ] **Web3Forms access key** — replace `YOUR_WEB3FORMS_ACCESS_KEY` in `partials/contact-config.js`; set notification email to `contact@spokendevotion.com` and enable autoresponder in dashboard
-- [ ] **TikTok & X links** — add profile URLs when accounts are ready (homepage shows Coming Soon badges for now)
+- [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge for now)
 - [ ] **Instrumental tracks** — add audio files and cards on `/instrumental/` when ready
 - [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo
 
