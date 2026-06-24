@@ -37,48 +37,6 @@
     display: flex;
     align-items: center;
 }
-.page-banner--home {
-    overflow: visible;
-    min-height: auto;
-    display: block;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-}
-@media (min-width: 768px) {
-    .page-banner--home {
-        padding-bottom: 4rem;
-    }
-}
-.home-banner__media {
-    width: 100%;
-    line-height: 0;
-    text-align: center;
-    /* Full-width band — sides fill to page margins; image stays centered, never stretched */
-    background: linear-gradient(
-        90deg,
-        #0f172a 0%,
-        #1e2937 18%,
-        #1e2937 82%,
-        #0f172a 100%
-    );
-}
-.page-banner--home .home-banner__img {
-    width: 50%;
-    max-width: 50%;
-    height: auto;
-    display: inline-block;
-    vertical-align: top;
-    min-width: 0;
-    object-fit: contain;
-}
-.page-banner--home .page-banner__content {
-    padding: 2.5rem 1.5rem 0;
-}
-@media (min-width: 768px) {
-    .page-banner--home .page-banner__content {
-        padding: 3rem 1.5rem 0;
-    }
-}
 .page-banner__fallback,
 .page-banner__image,
 .page-banner__overlay {
@@ -87,7 +45,8 @@
 }
 .page-banner__image {
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -99,6 +58,15 @@
         to bottom,
         rgba(9, 9, 11, 0.45) 0%,
         rgba(9, 9, 11, 0.65) 100%
+    );
+}
+/* Stronger overlay for light-toned banner images (e.g. main.png) */
+.page-banner--light .page-banner__overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 9, 11, 0.5) 0%,
+        rgba(9, 9, 11, 0.72) 55%,
+        rgba(9, 9, 11, 0.82) 100%
     );
 }
 .page-banner__content {
