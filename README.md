@@ -24,7 +24,7 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Contact**     | Contact form via Web3Forms                       | [Contact](https://spokendevotion.com/contact/) |
+| **Contact**     | Contact form via Formspark                       | [Contact](https://spokendevotion.com/contact/) |
 
 ## Key Features
 
@@ -64,7 +64,7 @@ Coming soon (God willing):
 
 ## Contact
 
-Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Web3Forms](https://web3forms.com/) — access key in `partials/contact-config.js`; set `contact@spokendevotion.com` as the notification email in the Web3Forms dashboard.
+Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Formspark](https://formspark.io/) — form ID in `partials/contact-config.js`; set `contact@spokendevotion.com` as the notification email in the Formspark dashboard.
 
 ## Still To Do
 

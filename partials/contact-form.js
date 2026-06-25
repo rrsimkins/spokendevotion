@@ -1,16 +1,12 @@
 (function () {
     'use strict';
 
-    var ENDPOINT = 'https://api.web3forms.com/submit';
-
-    function getAccessKey() {
-        var key = window.SD_CONTACT && window.SD_CONTACT.accessKey;
-        if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-            var form = document.getElementById('contact-form');
-            key = form && form.getAttribute('data-access-key');
+    function getFormsparkEndpoint() {
+        var formId = window.SD_CONTACT && window.SD_CONTACT.formId;
+        if (!formId || formId === 'YOUR_FORMSPARK_FORM_ID') {
+            return null;
         }
-        if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') return null;
-        return key;
+        return 'https://submit.formspark.io/' + encodeURIComponent(formId);
     }
 
     function setSubmitting(button, isSubmitting) {
@@ -62,16 +58,16 @@
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            var botcheck = form.querySelector('input[name="botcheck"]');
-            if (botcheck && botcheck.checked) return;
+            var gotcha = form.querySelector('input[name="_gotcha"]');
+            if (gotcha && gotcha.value) return;
 
             if (!form.checkValidity()) {
                 form.reportValidity();
                 return;
             }
 
-            var accessKey = getAccessKey();
-            if (!accessKey) {
+            var endpoint = getFormsparkEndpoint();
+            if (!endpoint) {
                 if (errorEl) {
                     errorEl.textContent = 'Contact form is not configured yet. Please check back soon.';
                     errorEl.classList.remove('hidden');
@@ -85,7 +81,7 @@
             var firstName = (form.querySelector('[name="first_name"]') || {}).value || '';
             var lastName = (form.querySelector('[name="last_name"]') || {}).value || '';
             var email = (form.querySelector('[name="email"]') || {}).value || '';
-            var subject = (form.querySelector('[name="subject"]') || {}).value || 'General';
+            var subject = (form.querySelector('[name="subject"]') || {}).value || '';
             var message = (form.querySelector('[name="message"]') || {}).value || '';
             var phone = (form.querySelector('[name="phone"]') || {}).value || '';
             var wantsResponse = form.querySelector('[name="wants_response"]');
@@ -100,21 +96,23 @@
                 other: 'Other'
             };
 
+            var topicLabel = subjectLabels[subject] || subject || 'Not specified';
+
             var payload = {
-                access_key: accessKey,
-                subject: 'Spoken Devotion Contact: ' + (subjectLabels[subject] || subject || 'New Message'),
-                from_name: 'Spoken Devotion Website',
+                _subject: 'Spoken Devotion Contact: ' + topicLabel,
+                _email: email,
+                first_name: firstName,
+                last_name: lastName,
                 name: (firstName + ' ' + lastName).trim(),
                 email: email,
+                topic: topicLabel,
                 message: message,
                 phone: phone || 'Not provided',
-                'Wants Official Response': wantsResponseValue,
-                'First Name': firstName,
-                'Last Name': lastName,
-                'Topic': subjectLabels[subject] || subject || 'Not specified'
+                wants_response: wantsResponseValue,
+                _gotcha: ''
             };
 
-            fetch(ENDPOINT, {
+            fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -123,12 +121,12 @@
                 body: JSON.stringify(payload)
             })
                 .then(function (response) {
-                    return response.json().then(function (data) {
-                        if (!response.ok || !data.success) {
-                            throw new Error(data.message || 'Submit failed');
-                        }
-                        return data;
-                    });
+                    if (!response.ok) {
+                        return response.text().then(function (text) {
+                            throw new Error(text || 'Submit failed');
+                        });
+                    }
+                    return response;
                 })
                 .then(function () {
                     form.reset();

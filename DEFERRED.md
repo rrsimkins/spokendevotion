@@ -2,8 +2,8 @@
 
 Items intentionally held for later — not forgotten.
 
-## Web3Forms Autoresponder
-Contact form is wired via `partials/contact-config.js` and `partials/contact-form.js`. The access key is configured. In the Web3Forms dashboard, set the notification email to `contact@spokendevotion.com`. Autoresponder confirmation emails require **Web3Forms Pro** — thank-you copy on the site does not promise a confirmation email unless that is enabled.
+## Formspark Contact Form
+Contact form is wired via `partials/contact-config.js` and `partials/contact-form.js`. Add your Formspark form ID to `contact-config.js` (from [dashboard.formspark.io](https://dashboard.formspark.io)). In the Formspark dashboard, set the notification email to `contact@spokendevotion.com` and allow `spokendevotion.com` if domain restrictions are enabled.
 
 ## Social Media — X (Twitter)
 YouTube, TikTok, Instagram, and Facebook are live on the homepage. X shows a "Coming Soon" badge until the account is ready.
