@@ -3,7 +3,10 @@
 Items intentionally held for later — not forgotten.
 
 ## Prayers to the Father — Streaming
-Album uploaded to DistroKid. Pre-sales are open now; full release **July 3, 2026** on Spotify, Apple Music, and other platforms. Pre-save: [distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father). After release, add direct Spotify/Apple album URLs to the site.
+Album uploaded to DistroKid. Pre-sales are open now; full release **July 3, 2026** on Spotify, Apple Music, and other platforms. Pre-save: [distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father). After release, replace homepage Spotify / Apple Music / YouTube Music “Coming soon” cards with live profile links.
+
+## Alone in an Empty Grave — Single
+Uploaded to DistroKid for **July 3, 2026** release. Advertised on homepage; add to `/reflections/` when streaming links are live.
 
 ## Formspark Contact Form
 Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site key are in `partials/contact-config.js`. Turnstile **secret key** lives only in the Formspark dashboard. Notification email: `contact@spokendevotion.com`.

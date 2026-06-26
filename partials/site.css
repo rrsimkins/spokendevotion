@@ -158,6 +158,11 @@ a.social-card:hover {
     opacity: 0.75;
     cursor: default;
     border-color: rgba(251, 191, 36, 0.22);
+    pointer-events: none;
+}
+.social-card--soon:hover {
+    background: rgba(24, 24, 27, 0.8);
+    border-color: rgba(251, 191, 36, 0.22);
 }
 @media (max-width: 639px) {
     .social-row {

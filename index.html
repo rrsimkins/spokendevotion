@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=18">
+    <link rel="stylesheet" href="/partials/site.css?v=19">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         .accent-gold { color: #fbbf24; }
@@ -42,8 +42,8 @@
         </div>
     </section>
 
-    <!-- Album announcement -->
-    <div class="max-w-4xl mx-auto px-6 pt-10 md:pt-14">
+    <!-- Releases -->
+    <div class="max-w-5xl mx-auto px-6 pt-10 md:pt-14 space-y-6">
         <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="album-heading">
             <p class="album-announce__badge mb-4">
                 <i class="fa-solid fa-compact-disc" aria-hidden="true"></i>
@@ -54,7 +54,7 @@
             </h2>
             <p class="text-white/75 text-base md:text-lg mb-1">Ten spoken prayers written by Ruby Rose</p>
             <p class="text-white/60 text-sm md:text-base mb-6">
-                Pre-sales are open now on Spotify, Apple Music, and more.
+                Pre-sales are open now.
                 <span class="text-amber-400/90">Full release: July 3, 2026.</span>
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -72,6 +72,21 @@
                     Read the Prayers
                 </a>
             </div>
+        </section>
+
+        <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="single-heading">
+            <p class="album-announce__badge mb-4">
+                <i class="fa-solid fa-music" aria-hidden="true"></i>
+                New Single — July 3, 2026
+            </p>
+            <h2 id="single-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                Alone in an Empty Grave
+            </h2>
+            <p class="text-white/75 text-base md:text-lg mb-1">A Reflections song — on DistroKid now</p>
+            <p class="text-white/60 text-sm md:text-base mb-6">
+                Releases <span class="text-amber-400/90">July 3, 2026</span> on all major platforms.
+                Listen here on our <a href="/reflections/" class="text-amber-400/90 underline hover:text-amber-300">Reflections</a> page when it goes live.
+            </p>
         </section>
     </div>
 
@@ -111,30 +126,29 @@
                 <span class="font-semibold text-sm md:text-base">X</span>
                 <span class="social-card__handle">@Spoken_Devotion</span>
             </a>
-        </div>
-
-        <div class="flex flex-wrap items-stretch justify-center gap-3 md:gap-4 mt-2 max-w-3xl mx-auto">
-            <a id="presave-spotify-home"
-               href="https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center min-w-[8.5rem]">
+            <div class="social-card social-card--soon flex flex-col items-center justify-center p-4 md:p-5 text-center" aria-label="Spotify — coming soon">
+                <span class="social-card__badge">Soon</span>
                 <i class="fa-brands fa-spotify text-3xl md:text-4xl mb-2 accent-gold"></i>
                 <span class="font-semibold text-sm md:text-base">Spotify</span>
-                <span class="social-card__handle">Pre-save now</span>
-            </a>
-            <a id="presave-apple-home"
-               href="https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center min-w-[8.5rem]">
+                <span class="social-card__handle">Coming soon</span>
+            </div>
+            <div class="social-card social-card--soon flex flex-col items-center justify-center p-4 md:p-5 text-center" aria-label="Apple Music — coming soon">
+                <span class="social-card__badge">Soon</span>
                 <i class="fa-brands fa-apple text-3xl md:text-4xl mb-2 accent-gold"></i>
                 <span class="font-semibold text-sm md:text-base">Apple Music</span>
-                <span class="social-card__handle">Pre-add now</span>
-            </a>
+                <span class="social-card__handle">Coming soon</span>
+            </div>
+            <div class="social-card social-card--soon flex flex-col items-center justify-center p-4 md:p-5 text-center" aria-label="YouTube Music — coming soon">
+                <span class="social-card__badge">Soon</span>
+                <i class="fa-brands fa-youtube text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">YouTube Music</span>
+                <span class="social-card__handle">Coming soon</span>
+            </div>
         </div>
-        <p class="text-center text-sm text-white/60 mt-6">
-            <span class="text-amber-400/90 font-medium">Prayers to the Father</span> — pre-sales open now, releases July 3, 2026 on all major platforms.
+        <p class="text-center text-sm text-white/60 mt-6 max-w-2xl mx-auto">
+            <span class="text-amber-400/90 font-medium">Prayers to the Father</span> and
+            <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span> release July 3, 2026.
+            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save the album above.
         </p>
 
         <blockquote class="home-verse text-lg md:text-xl font-light text-white/70 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
@@ -169,16 +183,14 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=2"></script>
+    <script src="/partials/streaming-config.js?v=3"></script>
     <script src="/partials/site.js?v=22"></script>
     <script>
         (function () {
             var cfg = window.SD_STREAMING;
             if (!cfg || !cfg.presaveUrl) return;
-            ['presave-cta-home', 'presave-spotify-home', 'presave-apple-home'].forEach(function (id) {
-                var el = document.getElementById(id);
-                if (el) el.href = cfg.presaveUrl;
-            });
+            var el = document.getElementById('presave-cta-home');
+            if (el) el.href = cfg.presaveUrl;
         })();
     </script>
 </body>
