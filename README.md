@@ -30,7 +30,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
 | **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
 | **Prayer** | *Prayers to the Father* album — pre-save now, releases July 3, 2026; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
-| **Reflections** *(Soon)* | Contemporary faith-centered songs that reflect God and life — not worship | [Reflections](https://spokendevotion.com/reflections/) |
+| **Reflections** | *Alone in an Empty Grave* and *Lost* — written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
 | **Worship** | Original worship songs with lyrics in modal | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
@@ -41,7 +41,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Share buttons** — one-click copy of direct audio or YouTube links
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
-- **Nav Soon badges** on Instrumental and Reflections
+- **Nav Soon badge** on Instrumental
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`lyrics.json`, `confessions.json`, `prayer.json`)
@@ -82,7 +82,7 @@ Use the [Contact](https://spokendevotion.com/contact/) page. Form submissions go
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
-- [ ] **Reflections tracks** — publish two ready songs and expand the section
+- [x] **Reflections tracks** — *Alone in an Empty Grave* (pre-save) and *Lost* (debuting soon) on `/reflections/`
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026

@@ -12,7 +12,7 @@ Uploaded to DistroKid for **July 3, 2026** release. Pre-save: [distrokid.com/hyp
 Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site key are in `partials/contact-config.js`. Turnstile **secret key** lives only in the Formspark dashboard. Notification email: `contact@spokendevotion.com`.
 
 ## Reflections Section
-`/reflections/` page is live with a coming-soon placeholder and `reflections.png` banner. Two contemporary faith-centered songs are ready to publish; more planned. Distinct from Worship — songs that reflect God and life, not sung directly to the Lord.
+`/reflections/` lists **Alone in an Empty Grave** (pre-save live; streaming player after July 3, 2026) and **Lost** (debuting soon). Both written by Anthony and sang by Suno. Lyrics for *Alone in an Empty Grave* in `reflections/reflections.json`. Add *Lost* lyrics and presave/streaming links when ready.
 
 ## Instrumental Tracks
 Instrumental page is live in navigation (Soon badge) with a coming-soon message. Add real tracks when audio files are ready.
