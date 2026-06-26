@@ -29,7 +29,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
 | **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Prayer** | Written & spoken prayers via YouTube embed with full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+| **Prayer** | *Prayers to the Father I* album — pre-save now, releases July 3, 2026; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
 | **Reflections** *(Soon)* | Contemporary faith-centered songs that reflect God and life — not worship | [Reflections](https://spokendevotion.com/reflections/) |
 | **Worship** | Original worship songs with lyrics in modal | [Worship](https://spokendevotion.com/worship/) |
 
@@ -69,10 +69,9 @@ Active on:
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Coming soon (God willing):
-- Spotify
-- Apple Music
-- Other streaming platforms
+Streaming — **Prayers to the Father I** (pre-save now, releases **July 3, 2026**):
+- [Pre-save / Pre-add on all platforms](https://distrokid.com/hyperfollow/spoken-devotion/prayers-to-the-father-i) — DistroKid HyperFollow (update URL in `partials/streaming-config.js` if your slug differs)
+- Spotify, Apple Music, and other major platforms at release
 
 ## Contact
 
@@ -86,6 +85,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [ ] **Reflections tracks** — publish two ready songs and expand the section
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [x] **Reflections banner** — `reflections.png` added
+- [x] **Prayers to the Father I** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [ ] **YouTube migration (remaining)** — move worship/confessions MP3s to YouTube embeds when ready
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads

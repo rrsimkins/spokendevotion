@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoken Devotion • Prayer</title>
-    <meta name="description" content="Written and spoken prayers from Spoken Devotion — watch, read, and share.">
+    <meta name="description" content="Prayers to the Father I — ten spoken prayers by Anna. Pre-save now; releases July 3, 2026 on all platforms. Watch, read, and share.">
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spoken Devotion">
-    <meta property="og:title" content="Spoken Devotion • Prayer">
-    <meta property="og:description" content="Written and spoken prayers from Spoken Devotion — watch, read, and share.">
+    <meta property="og:title" content="Spoken Devotion • Prayers to the Father I">
+    <meta property="og:description" content="Ten spoken prayers to the Father by Anna. Pre-save now — full album releases July 3, 2026 on Spotify, Apple Music, and more.">
     <meta property="og:url" content="https://spokendevotion.com/prayer/">
     <meta property="og:image" content="https://spokendevotion.com/images/prayer.png">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=17">
+    <link rel="stylesheet" href="/partials/site.css?v=18">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
     </style>
@@ -39,92 +39,188 @@
         </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-6 py-12">
-        <div class="grid sm:grid-cols-2 gap-6" id="prayer-grid">
-            <div class="audio-card prayer-card p-5 md:p-6" id="featured-item">
-                <div class="mb-4">
-                    <h3 class="text-xl font-semibold mb-0.5">Prayer for Family</h3>
-                    <p class="text-amber-400 text-sm">By Anna</p>
-                </div>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                    <iframe width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/cXjYpYWQayU"
-                            title="Prayer for Family - Spoken Devotion"
-                            loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="showPrayer('family-prayer')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Prayer
-                    </button>
-                    <button onclick="shareYouTube('https://youtu.be/cXjYpYWQayU?si=TpfaOkzCQ7q9DY2_', 'Prayer for Family')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
-                </div>
-            </div>
-
-            <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6">
-                <div class="mb-4">
-                    <h3 class="text-xl font-semibold mb-0.5">Prayer of Repentance</h3>
-                    <p class="text-amber-400 text-sm">By Anna</p>
-                </div>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                    <iframe width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/zr02WBnH33c"
-                            title="Prayer of Repentance - Spoken Devotion"
-                            loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="showPrayer('repentance-prayer')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Prayer
-                    </button>
-                    <button onclick="shareYouTube('https://youtu.be/zr02WBnH33c?si=NW3XieLmvaFBM5pQ', 'Prayer of Repentance')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
+    <div class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+        <section class="album-announce p-6 md:p-10" aria-labelledby="album-heading">
+            <div class="text-center mb-8">
+                <p class="album-announce__badge mb-4">
+                    <i class="fa-solid fa-compact-disc" aria-hidden="true"></i>
+                    Out Now for Pre-save
+                </p>
+                <h2 id="album-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                    Prayers to the Father I
+                </h2>
+                <p class="text-white/75 text-base md:text-lg">Ten spoken prayers by Anna — uploaded to DistroKid</p>
+                <p class="text-white/60 text-sm md:text-base mt-2">
+                    Pre-sales are <span class="text-amber-400/90 font-medium">open now</span> on Spotify, Apple Music, and more.
+                    Full release: <span class="text-amber-400/90 font-medium">July 3, 2026</span>.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+                    <a id="presave-cta-prayer"
+                       href="https://distrokid.com/hyperfollow/spoken-devotion/prayers-to-the-father-i"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        Pre-save / Pre-add Album
+                    </a>
+                    <a href="https://www.youtube.com/@Spoken_Devotion"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-x-2 px-6 py-3 text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-full transition-all text-sm md:text-base">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        Watch on YouTube
+                    </a>
                 </div>
             </div>
 
-            <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6">
-                <div class="mb-4">
-                    <h3 class="text-xl font-semibold mb-0.5">Prayer of Need</h3>
-                    <p class="text-amber-400 text-sm">By Anna</p>
+            <div class="album-tracklist" id="album-tracklist">
+                <div class="album-track">
+                    <span class="album-track__num">1</span>
+                    <span class="album-track__title">Prayer of Repentance</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('repentance-prayer')">Read</button>
                 </div>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                    <iframe width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/zZ0f6Ht9gmQ"
-                            title="Prayer of Need - Spoken Devotion"
-                            loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                    </iframe>
+                <div class="album-track">
+                    <span class="album-track__num">2</span>
+                    <span class="album-track__title">Prayer for Family</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('family-prayer')">Read</button>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="showPrayer('need-prayer')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Prayer
-                    </button>
-                    <button onclick="shareYouTube('https://youtu.be/zZ0f6Ht9gmQ?si=39smsnP_iyCfiumn', 'Prayer of Need')"
-                            class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
+                <div class="album-track">
+                    <span class="album-track__num">3</span>
+                    <span class="album-track__title">Prayer of Loneliness</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('loneliness-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">4</span>
+                    <span class="album-track__title">Prayer of Thankfulness</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('thankfulness-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">5</span>
+                    <span class="album-track__title">Prayer of Healing</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('healing-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">6</span>
+                    <span class="album-track__title">Prayer for Today</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('today-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">7</span>
+                    <span class="album-track__title">Prayer of Wisdom</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('wisdom-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">8</span>
+                    <span class="album-track__title">Prayer of Need</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('need-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">9</span>
+                    <span class="album-track__title">Prayer of Dedication</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('dedication-prayer')">Read</button>
+                </div>
+                <div class="album-track">
+                    <span class="album-track__num">10</span>
+                    <span class="album-track__title">Prayer of Protection</span>
+                    <button type="button" class="album-track__action" onclick="showPrayer('protection-prayer')">Read</button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <p class="text-center text-amber-300 italic mt-12 text-base md:text-lg">
-            All prayers are on our <a href="https://www.youtube.com/@Spoken_Devotion" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">YouTube channel</a>. More coming soon — keep watch on iTunes and Spotify for a possible release in the coming weeks.
+        <section>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight heading-font text-center mb-2">Watch on YouTube</h2>
+            <p class="text-center text-white/60 text-sm md:text-base mb-8 max-w-2xl mx-auto">
+                Video prayers are on our channel now. All ten tracks stream everywhere starting July 3, 2026 — pre-save today so you do not miss the release.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-6" id="prayer-grid">
+                <div class="audio-card prayer-card p-5 md:p-6" id="featured-item">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-0.5">Prayer for Family</h3>
+                        <p class="text-amber-400 text-sm">By Anna · Track 2</p>
+                    </div>
+                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
+                        <iframe width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/cXjYpYWQayU"
+                                title="Prayer for Family - Spoken Devotion"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="showPrayer('family-prayer')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
+                            <i class="fa-solid fa-book-open"></i> Show Prayer
+                        </button>
+                        <button onclick="shareYouTube('https://youtu.be/cXjYpYWQayU?si=TpfaOkzCQ7q9DY2_', 'Prayer for Family')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
+                            <i class="fa-solid fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-0.5">Prayer of Repentance</h3>
+                        <p class="text-amber-400 text-sm">By Anna · Track 1</p>
+                    </div>
+                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
+                        <iframe width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/zr02WBnH33c"
+                                title="Prayer of Repentance - Spoken Devotion"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="showPrayer('repentance-prayer')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
+                            <i class="fa-solid fa-book-open"></i> Show Prayer
+                        </button>
+                        <button onclick="shareYouTube('https://youtu.be/zr02WBnH33c?si=NW3XieLmvaFBM5pQ', 'Prayer of Repentance')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
+                            <i class="fa-solid fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6 sm:col-span-2 max-w-2xl mx-auto w-full">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-0.5">Prayer of Need</h3>
+                        <p class="text-amber-400 text-sm">By Anna · Track 8</p>
+                    </div>
+                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
+                        <iframe width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/zZ0f6Ht9gmQ"
+                                title="Prayer of Need - Spoken Devotion"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="showPrayer('need-prayer')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
+                            <i class="fa-solid fa-book-open"></i> Show Prayer
+                        </button>
+                        <button onclick="shareYouTube('https://youtu.be/zZ0f6Ht9gmQ?si=39smsnP_iyCfiumn', 'Prayer of Need')"
+                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
+                            <i class="fa-solid fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="text-center text-amber-300 italic text-base md:text-lg max-w-3xl mx-auto">
+            <span class="font-medium not-italic text-amber-200">Prayers to the Father I</span> is on DistroKid now.
+            Pre-save on <a id="presave-inline-prayer" href="https://distrokid.com/hyperfollow/spoken-devotion/prayers-to-the-father-i" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">Spotify, Apple Music, and more</a>
+            — full album out <span class="font-medium not-italic">July 3, 2026</span>.
+            More video prayers are on our <a href="https://www.youtube.com/@Spoken_Devotion" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">YouTube channel</a>.
         </p>
     </div>
 
@@ -148,9 +244,19 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/site.js?v=21"></script>
+    <script src="/partials/streaming-config.js?v=1"></script>
+    <script src="/partials/site.js?v=22"></script>
     <script>
         let prayersCache = {};
+
+        (function () {
+            var cfg = window.SD_STREAMING;
+            if (!cfg || !cfg.presaveUrl) return;
+            ['presave-cta-prayer', 'presave-inline-prayer'].forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) el.href = cfg.presaveUrl;
+            });
+        })();
 
         async function showPrayer(id) {
             const modal = document.getElementById('prayer-modal');
