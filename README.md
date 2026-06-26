@@ -67,9 +67,9 @@ Active on:
 - [TikTok](https://www.tiktok.com/@spoken.devotion) — `@spoken.devotion`
 - [Instagram](https://www.instagram.com/spoken_devotion/) — `@spoken_devotion`
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
+- [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
 Coming soon (God willing):
-- X (Twitter) — `@spoken.devotion`
 - Spotify
 - Apple Music
 - Other streaming platforms
@@ -82,7 +82,7 @@ Use the [Contact](https://spokendevotion.com/contact/) page. Form submissions go
 
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
-- [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge)
+- [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
 - [ ] **Reflections tracks** — publish two ready songs and expand the section
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [x] **Reflections banner** — `reflections.png` added
