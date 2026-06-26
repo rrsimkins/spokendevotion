@@ -82,6 +82,14 @@
         });
     };
 
+    window.shareYouTube = function (url, title) {
+        navigator.clipboard.writeText(url).then(function () {
+            showToast('Link for "' + title + '" copied!');
+        }).catch(function () {
+            prompt('Copy this link:', url);
+        });
+    };
+
     window.showToast = function (message) {
         const toast = document.getElementById('toast');
         const text = document.getElementById('toast-text');

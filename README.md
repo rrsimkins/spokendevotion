@@ -20,7 +20,7 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 |---------------|--------------------------------------------------|------|
 | **Home**      | Mission, Scripture highlight, and social links   | [Home](https://spokendevotion.com/) |
 | **Worship**   | Original worship songs with lyrics in modal      | [Worship](https://spokendevotion.com/worship/) |
-| **Prayer**    | Written & spoken prayers with full text modals   | [Prayer](https://spokendevotion.com/prayer/) |
+| **Prayer**    | Written & spoken prayers via YouTube embed with full text modals | [Prayer](https://spokendevotion.com/prayer/) |
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
@@ -72,7 +72,8 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 - [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge for now)
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
-- [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo
+- [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need now use YouTube embeds
+- [ ] **YouTube migration (remaining)** — move any other hosted MP3s to YouTube embeds
 - [ ] **Normalize banner dimensions** — resize any banners not yet at 1760×370
 
 ## Vision
