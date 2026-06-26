@@ -55,7 +55,8 @@ Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect)
 | `confession.png` | Confessions |
 | `instrumental.png` | Instrumental |
 | `prayer.png` | Prayer |
-| `worship.png` | Worship, Reflections (placeholder until `reflections.png` is added) |
+| `reflections.png` | Reflections |
+| `worship.png` | Worship |
 
 ## Platforms
 
@@ -82,7 +83,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge)
 - [ ] **Reflections tracks** — publish two ready songs and expand the section
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
-- [ ] **Reflections banner** — add `reflections.png` at 1760×370
+- [x] **Reflections banner** — `reflections.png` added at 1760×370
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [ ] **YouTube migration (remaining)** — move worship/confessions MP3s to YouTube embeds when ready
 - [ ] **Normalize banner dimensions** — resize/compress any banners not yet at 1760×370

@@ -9,7 +9,7 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 YouTube, TikTok, Instagram, and Facebook are live on the homepage with handles in a single horizontal row. X shows a "Coming Soon" badge until the account is ready (`@spoken.devotion` placeholder).
 
 ## Reflections Section
-`/reflections/` page is live with a coming-soon placeholder. Two contemporary faith-centered songs are ready to publish; more planned. Add `reflections.png` banner (1760×370) when available. Distinct from Worship — songs that reflect God and life, not sung directly to the Lord.
+`/reflections/` page is live with a coming-soon placeholder and `reflections.png` banner. Two contemporary faith-centered songs are ready to publish; more planned. Distinct from Worship — songs that reflect God and life, not sung directly to the Lord.
 
 ## Instrumental Tracks
 Instrumental page is live in navigation (Soon badge) with a coming-soon message. Add real tracks when audio files are ready.
