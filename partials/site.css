@@ -29,11 +29,11 @@ body {
     background: linear-gradient(135deg, #1e2937 0%, #422006 45%, #1e3a8a 100%);
 }
 
-/* Page banner — sits below fixed nav (h-24 / 6rem) */
+/* Page banner — sits below fixed nav (h-28 / 7rem) */
 .page-banner {
     position: relative;
     overflow: hidden;
-    margin-top: 6rem;
+    margin-top: 7rem;
 }
 .page-banner--standard {
     min-height: 18rem;
@@ -47,7 +47,7 @@ body {
     }
 }
 .page-banner--tall {
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 7rem);
     display: flex;
     align-items: center;
     justify-content: center;
