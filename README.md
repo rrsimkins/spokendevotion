@@ -82,7 +82,7 @@ Use the [Contact](https://spokendevotion.com/contact/) page. Form submissions go
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
-- [x] **Reflections tracks** — *Alone in an Empty Grave* (pre-save) and *Lost* (debuting soon) on `/reflections/`
+- [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* (both pre-save) on `/reflections/`
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026

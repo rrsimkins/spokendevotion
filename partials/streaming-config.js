@@ -9,6 +9,7 @@ window.SD_STREAMING = {
     featuredArtist: 'Ruby Rose',
     presaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father',
     singlePresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave',
+    lostPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/lost',
     releaseDate: '2026-07-03',
     releaseDateLabel: 'July 3, 2026'
 };

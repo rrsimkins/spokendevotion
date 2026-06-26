@@ -86,12 +86,41 @@
             <p class="text-white/60 text-sm md:text-base mb-6">
                 Pre-sales are open now.
                 <span class="text-amber-400/90">Full release: July 3, 2026.</span>
-                Both this song and our new single <span class="text-amber-400/90">Lost</span> live on
-                <a href="/reflections/" class="text-amber-400/90 underline hover:text-amber-300">Reflections</a> when streaming goes live.
+                On our <a href="/reflections/" class="text-amber-400/90 underline hover:text-amber-300">Reflections</a> page when streaming goes live.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a id="presave-cta-single-home"
                    href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    Pre-save / Pre-add Single
+                </a>
+                <a href="/reflections/"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-compact-disc" aria-hidden="true"></i>
+                    Reflections
+                </a>
+            </div>
+        </section>
+
+        <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="lost-heading">
+            <p class="album-announce__badge mb-4">
+                <i class="fa-solid fa-music" aria-hidden="true"></i>
+                New Single — Pre-save Now
+            </p>
+            <h2 id="lost-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                Lost
+            </h2>
+            <p class="text-white/75 text-base md:text-lg mb-1">Written by Anthony and sang by Suno</p>
+            <p class="text-white/60 text-sm md:text-base mb-6">
+                A Reflections song — pre-sales open now.
+                <span class="text-amber-400/90">Full release: July 3, 2026.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="presave-cta-lost-home"
+                   href="https://distrokid.com/hyperfollow/spokendevotion/lost"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
@@ -163,10 +192,10 @@
             </div>
         </div>
         <p class="text-center text-sm text-white/60 mt-6 max-w-2xl mx-auto">
-            <span class="text-amber-400/90 font-medium">Prayers to the Father</span> and
-            <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span> releases July 3, 2026;
-            <span class="text-amber-400/90 font-medium">Lost</span> debuts on Reflections soon.
-            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save both releases above.
+            <span class="text-amber-400/90 font-medium">Prayers to the Father</span>,
+            <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span>, and
+            <span class="text-amber-400/90 font-medium">Lost</span> release July 3, 2026.
+            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save all three above.
         </p>
 
         <blockquote class="home-verse text-lg md:text-xl font-light text-white/70 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
@@ -201,7 +230,7 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=5"></script>
+    <script src="/partials/streaming-config.js?v=6"></script>
     <script src="/partials/site.js?v=22"></script>
     <script>
         (function () {
@@ -214,6 +243,10 @@
             if (cfg.singlePresaveUrl) {
                 var single = document.getElementById('presave-cta-single-home');
                 if (single) single.href = cfg.singlePresaveUrl;
+            }
+            if (cfg.lostPresaveUrl) {
+                var lost = document.getElementById('presave-cta-lost-home');
+                if (lost) lost.href = cfg.lostPresaveUrl;
             }
         })();
     </script>

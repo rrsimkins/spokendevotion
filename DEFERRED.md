@@ -12,7 +12,7 @@ Uploaded to DistroKid for **July 3, 2026** release. Pre-save: [distrokid.com/hyp
 Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site key are in `partials/contact-config.js`. Turnstile **secret key** lives only in the Formspark dashboard. Notification email: `contact@spokendevotion.com`.
 
 ## Reflections Section
-`/reflections/` lists **Alone in an Empty Grave** (pre-save live; streaming player after July 3, 2026) and **Lost** (debuting soon). Both written by Anthony and sang by Suno. Lyrics for *Alone in an Empty Grave* in `reflections/reflections.json`. Add *Lost* lyrics and presave/streaming links when ready.
+`/reflections/` lists **Alone in an Empty Grave** and **Lost** (both pre-save live; streaming players after July 3, 2026). Pre-save: [alone-in-an-empty-grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave), [lost](https://distrokid.com/hyperfollow/spokendevotion/lost). Lyrics in `reflections/reflections.json`.
 
 ## Instrumental Tracks
 Instrumental page is live in navigation (Soon badge) with a coming-soon message. Add real tracks when audio files are ready.

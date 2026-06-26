@@ -75,7 +75,7 @@
                     <p class="text-white/50 text-sm">Streaming player here after release</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <a id="presave-cta-reflections"
+                    <a id="presave-cta-alone-reflections"
                        href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -95,15 +95,19 @@
                     <p class="text-amber-400 text-sm">Written by Anthony and sang by Suno</p>
                 </div>
                 <p class="text-white/65 text-sm mb-4 leading-relaxed">
-                    A new Reflections song debuting here soon, God willing.
+                    Pre-save open now. Full release <span class="text-amber-400/90">July 3, 2026</span> on all major platforms.
                 </p>
                 <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900/80 border border-amber-400/20 flex items-center justify-center px-6 text-center">
-                    <p class="text-white/50 text-sm">Coming soon</p>
+                    <p class="text-white/50 text-sm">Streaming player here after release</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-white/45 border border-amber-400/20 rounded-xl">
-                        <i class="fa-solid fa-clock"></i> Debuting soon
-                    </span>
+                    <a id="presave-cta-lost-reflections"
+                       href="https://distrokid.com/hyperfollow/spokendevotion/lost"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
+                        <i class="fa-solid fa-heart"></i> Pre-save Single
+                    </a>
                     <button type="button" onclick="showReflection('lost')"
                             class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
                         <i class="fa-solid fa-scroll"></i> Show Lyrics
@@ -128,16 +132,22 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=5"></script>
+    <script src="/partials/streaming-config.js?v=6"></script>
     <script src="/partials/site.js?v=22"></script>
     <script>
         let reflectionsCache = {};
 
         (function () {
             var cfg = window.SD_STREAMING;
-            if (!cfg || !cfg.singlePresaveUrl) return;
-            var el = document.getElementById('presave-cta-reflections');
-            if (el) el.href = cfg.singlePresaveUrl;
+            if (!cfg) return;
+            if (cfg.singlePresaveUrl) {
+                var alone = document.getElementById('presave-cta-alone-reflections');
+                if (alone) alone.href = cfg.singlePresaveUrl;
+            }
+            if (cfg.lostPresaveUrl) {
+                var lost = document.getElementById('presave-cta-lost-reflections');
+                if (lost) lost.href = cfg.lostPresaveUrl;
+            }
         })();
 
         async function showReflection(id) {
