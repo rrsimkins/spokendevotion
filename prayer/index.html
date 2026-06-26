@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoken Devotion • Prayer</title>
-    <meta name="description" content="Prayers to the Father — ten spoken prayers by Anna. Pre-save now; releases July 3, 2026 on all platforms. Watch, read, and share.">
+    <meta name="description" content="Prayers to the Father — ten spoken prayers written by Ruby Rose. Pre-save now; releases July 3, 2026 on all platforms. Watch, read, and share.">
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spoken Devotion">
     <meta property="og:title" content="Spoken Devotion • Prayers to the Father">
-    <meta property="og:description" content="Ten spoken prayers to the Father by Anna. Pre-save now — full album releases July 3, 2026 on Spotify, Apple Music, and more.">
+    <meta property="og:description" content="Ten spoken prayers to the Father written by Ruby Rose and recited and produced by Suno. Pre-save now — full album releases July 3, 2026.">
     <meta property="og:url" content="https://spokendevotion.com/prayer/">
     <meta property="og:image" content="https://spokendevotion.com/images/prayer.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +49,7 @@
                 <h2 id="album-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
                     Prayers to the Father
                 </h2>
-                <p class="text-white/75 text-base md:text-lg">Ten spoken prayers by Anna — uploaded to DistroKid</p>
+                <p class="text-white/75 text-base md:text-lg">Written by Ruby Rose and recited and produced by Suno</p>
                 <p class="text-white/60 text-sm md:text-base mt-2">
                     Pre-sales are <span class="text-amber-400/90 font-medium">open now</span> on Spotify, Apple Music, and more.
                     Full release: <span class="text-amber-400/90 font-medium">July 3, 2026</span>.
@@ -136,7 +136,7 @@
                 <div class="audio-card prayer-card p-5 md:p-6" id="featured-item">
                     <div class="mb-4">
                         <h3 class="text-xl font-semibold mb-0.5">Prayer for Family</h3>
-                        <p class="text-amber-400 text-sm">By Anna · Track 2</p>
+                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 2</p>
                     </div>
                     <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
                         <iframe width="100%"
@@ -163,7 +163,7 @@
                 <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6">
                     <div class="mb-4">
                         <h3 class="text-xl font-semibold mb-0.5">Prayer of Repentance</h3>
-                        <p class="text-amber-400 text-sm">By Anna · Track 1</p>
+                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 1</p>
                     </div>
                     <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
                         <iframe width="100%"
@@ -190,7 +190,7 @@
                 <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6 sm:col-span-2 max-w-2xl mx-auto w-full">
                     <div class="mb-4">
                         <h3 class="text-xl font-semibold mb-0.5">Prayer of Need</h3>
-                        <p class="text-amber-400 text-sm">By Anna · Track 8</p>
+                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 8</p>
                     </div>
                     <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
                         <iframe width="100%"
@@ -271,7 +271,7 @@
                     throw new Error('Prayer not found');
                 }
                 titleEl.textContent = prayer.title;
-                byEl.textContent = prayer.by ? 'By ' + prayer.by : '';
+                byEl.textContent = prayer.by || '';
                 body.textContent = prayer.text || '';
                 openContentModal(modal);
             } catch (err) {
