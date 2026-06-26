@@ -77,16 +77,32 @@
         <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="single-heading">
             <p class="album-announce__badge mb-4">
                 <i class="fa-solid fa-music" aria-hidden="true"></i>
-                New Single — July 3, 2026
+                New Single — Pre-save Now
             </p>
             <h2 id="single-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
                 Alone in an Empty Grave
             </h2>
-            <p class="text-white/75 text-base md:text-lg mb-1">A Reflections song — on DistroKid now</p>
+            <p class="text-white/75 text-base md:text-lg mb-1">A Reflections song — preview and pre-save open now</p>
             <p class="text-white/60 text-sm md:text-base mb-6">
-                Releases <span class="text-amber-400/90">July 3, 2026</span> on all major platforms.
-                Listen here on our <a href="/reflections/" class="text-amber-400/90 underline hover:text-amber-300">Reflections</a> page when it goes live.
+                Pre-sales are open now.
+                <span class="text-amber-400/90">Full release: July 3, 2026.</span>
+                Streaming player here on <a href="/reflections/" class="text-amber-400/90 underline hover:text-amber-300">Reflections</a> when it goes live.
             </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="presave-cta-single-home"
+                   href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    Pre-save / Pre-add Single
+                </a>
+                <a href="/reflections/"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-compact-disc" aria-hidden="true"></i>
+                    Reflections
+                </a>
+            </div>
         </section>
     </div>
 
@@ -148,7 +164,7 @@
         <p class="text-center text-sm text-white/60 mt-6 max-w-2xl mx-auto">
             <span class="text-amber-400/90 font-medium">Prayers to the Father</span> and
             <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span> release July 3, 2026.
-            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save the album above.
+            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save both releases above.
         </p>
 
         <blockquote class="home-verse text-lg md:text-xl font-light text-white/70 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
@@ -183,14 +199,20 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=3"></script>
+    <script src="/partials/streaming-config.js?v=4"></script>
     <script src="/partials/site.js?v=22"></script>
     <script>
         (function () {
             var cfg = window.SD_STREAMING;
-            if (!cfg || !cfg.presaveUrl) return;
-            var el = document.getElementById('presave-cta-home');
-            if (el) el.href = cfg.presaveUrl;
+            if (!cfg) return;
+            if (cfg.presaveUrl) {
+                var album = document.getElementById('presave-cta-home');
+                if (album) album.href = cfg.presaveUrl;
+            }
+            if (cfg.singlePresaveUrl) {
+                var single = document.getElementById('presave-cta-single-home');
+                if (single) single.href = cfg.singlePresaveUrl;
+            }
         })();
     </script>
 </body>

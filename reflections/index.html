@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflections • Spoken Devotion</title>
-    <meta name="description" content="Contemporary faith-centered songs that reflect God, life, and devotion — not worship, but still pointing toward Him. Coming soon from Spoken Devotion.">
+    <meta name="description" content="Alone in an Empty Grave — pre-save now. Reflections songs that reflect God, life, and devotion. Releases July 3, 2026.">
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=17">
+    <link rel="stylesheet" href="/partials/site.css?v=19">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         .accent-gold { color: #fbbf24; }
@@ -54,23 +54,56 @@
         </p>
     </div>
 
-    <div class="max-w-5xl mx-auto px-6 pb-20 text-center">
-        <div class="mb-8">
-            <h2 class="text-3xl font-semibold tracking-tight heading-font mb-2">Listen</h2>
-            <p class="text-white/60">Two songs are ready and more are on the way — this section launches soon, God willing.</p>
+    <div class="max-w-5xl mx-auto px-6 pb-20">
+        <section class="album-announce p-6 md:p-10 text-center max-w-3xl mx-auto mb-12" aria-labelledby="reflections-single-heading">
+            <p class="album-announce__badge mb-4">
+                <i class="fa-solid fa-music" aria-hidden="true"></i>
+                Pre-save Now
+            </p>
+            <h2 id="reflections-single-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                Alone in an Empty Grave
+            </h2>
+            <p class="text-white/75 text-base md:text-lg mb-1">Our first Reflections release on DistroKid</p>
+            <p class="text-white/60 text-sm md:text-base mb-6">
+                Preview and pre-save are open now on Spotify, Apple Music, and more.
+                <span class="text-amber-400/90">Full release: July 3, 2026.</span>
+                The player will appear here when streaming goes live.
+            </p>
+            <a id="presave-cta-reflections"
+               href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                Pre-save / Pre-add Single
+            </a>
+        </section>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-semibold tracking-tight heading-font mb-2">More Reflections</h2>
+            <p class="text-white/60 max-w-xl mx-auto">More songs are on the way — God willing.</p>
         </div>
 
         <div id="reflections-tracks" class="max-w-2xl mx-auto">
-            <div class="audio-card audio-card--secondary p-10 text-white/60">
+            <div class="audio-card audio-card--secondary p-10 text-center text-white/60">
                 <i class="fa-solid fa-compact-disc text-3xl accent-gold mb-4"></i>
-                <p class="mb-2">Reflections tracks coming soon — God willing.</p>
-                <p class="text-sm text-white/45">We are preparing the first releases now.</p>
+                <p class="mb-2">Additional Reflections tracks coming soon.</p>
+                <p class="text-sm text-white/45">Listen to <span class="text-amber-400/90">Alone in an Empty Grave</span> here after July 3, 2026.</p>
             </div>
         </div>
     </div>
 
     <div id="footer-root"></div>
 
-    <script src="/partials/site.js?v=21"></script>
+    <script src="/partials/streaming-config.js?v=4"></script>
+    <script src="/partials/site.js?v=22"></script>
+    <script>
+        (function () {
+            var cfg = window.SD_STREAMING;
+            if (!cfg || !cfg.singlePresaveUrl) return;
+            var el = document.getElementById('presave-cta-reflections');
+            if (el) el.href = cfg.singlePresaveUrl;
+        })();
+    </script>
 </body>
 </html>
