@@ -134,6 +134,67 @@
                 </a>
             </div>
         </section>
+
+        <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="mercy-heading">
+            <p class="album-announce__badge mb-4">
+                <i class="fa-solid fa-hands-praying" aria-hidden="true"></i>
+                New Worship Single — Pre-save Now
+            </p>
+            <h2 id="mercy-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                Have Mercy on Me
+            </h2>
+            <p class="text-white/75 text-base md:text-lg mb-1">Lyrics by Anthony, produced and sang by Suno</p>
+            <p class="text-white/60 text-sm md:text-base mb-6">
+                Pre-sales are open now.
+                <span class="text-amber-400/90">Full release: July 3, 2026.</span>
+                On our <a href="/worship/" class="text-amber-400/90 underline hover:text-amber-300">Worship</a> page when streaming goes live.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="presave-cta-mercy-home"
+                   href="https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    Pre-save / Pre-add Single
+                </a>
+                <a href="/worship/"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-hands-praying" aria-hidden="true"></i>
+                    Worship
+                </a>
+            </div>
+        </section>
+
+        <section class="album-announce p-6 md:p-10 text-center" aria-labelledby="here-heading">
+            <p class="album-announce__badge mb-4">
+                <i class="fa-solid fa-hands-praying" aria-hidden="true"></i>
+                New Worship Single — Pre-save Now
+            </p>
+            <h2 id="here-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
+                Here I Am, Lord
+            </h2>
+            <p class="text-white/75 text-base md:text-lg mb-1">Lyrics by Anthony, produced and sang by Suno</p>
+            <p class="text-white/60 text-sm md:text-base mb-6">
+                Pre-sales are open now.
+                <span class="text-amber-400/90">Full release: July 3, 2026.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="presave-cta-here-home"
+                   href="https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    Pre-save / Pre-add Single
+                </a>
+                <a href="/worship/"
+                   class="inline-flex items-center gap-x-2 px-6 py-3 text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-full transition-all text-sm md:text-base">
+                    <i class="fa-solid fa-hands-praying" aria-hidden="true"></i>
+                    Worship
+                </a>
+            </div>
+        </section>
     </div>
 
     <!-- Social -->
@@ -193,9 +254,11 @@
         </div>
         <p class="text-center text-sm text-white/60 mt-6 max-w-2xl mx-auto">
             <span class="text-amber-400/90 font-medium">Prayers to the Father</span>,
-            <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span>, and
-            <span class="text-amber-400/90 font-medium">Lost</span> release July 3, 2026.
-            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save all three above.
+            <span class="text-amber-400/90 font-medium">Alone in an Empty Grave</span>,
+            <span class="text-amber-400/90 font-medium">Lost</span>,
+            <span class="text-amber-400/90 font-medium">Have Mercy on Me</span>, and
+            <span class="text-amber-400/90 font-medium">Here I Am, Lord</span> release July 3, 2026.
+            Spotify, Apple Music, and YouTube Music profiles go live with the release — pre-save all five above.
         </p>
 
         <blockquote class="home-verse text-lg md:text-xl font-light text-white/70 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
@@ -230,7 +293,7 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=6"></script>
+    <script src="/partials/streaming-config.js?v=7"></script>
     <script src="/partials/site.js?v=22"></script>
     <script>
         (function () {
@@ -247,6 +310,14 @@
             if (cfg.lostPresaveUrl) {
                 var lost = document.getElementById('presave-cta-lost-home');
                 if (lost) lost.href = cfg.lostPresaveUrl;
+            }
+            if (cfg.mercyPresaveUrl) {
+                var mercy = document.getElementById('presave-cta-mercy-home');
+                if (mercy) mercy.href = cfg.mercyPresaveUrl;
+            }
+            if (cfg.herePresaveUrl) {
+                var here = document.getElementById('presave-cta-here-home');
+                if (here) here.href = cfg.herePresaveUrl;
             }
         })();
     </script>

@@ -31,7 +31,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 | **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
 | **Prayer** | *Prayers to the Father* album — pre-save now, releases July 3, 2026; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
 | **Reflections** | *Alone in an Empty Grave* and *Lost* — written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
-| **Worship** | Original worship songs with lyrics in modal | [Worship](https://spokendevotion.com/worship/) |
+| **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — lyrics by Anthony, produced and sang by Suno; pre-save now | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
 
@@ -69,8 +69,10 @@ Active on:
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Streaming — **Prayers to the Father** (pre-save now, releases **July 3, 2026**):
-- [Pre-save / Pre-add on all platforms](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) — DistroKid HyperFollow
+Streaming — pre-sales open now; full release **July 3, 2026**:
+- [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album)
+- [Alone in an Empty Grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave), [Lost](https://distrokid.com/hyperfollow/spokendevotion/lost) (Reflections)
+- [Have Mercy on Me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me), [Here I Am, Lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) (Worship)
 - Spotify, Apple Music, and other major platforms at release
 
 ## Contact
@@ -83,11 +85,12 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
 - [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* (both pre-save) on `/reflections/`
+- [x] **Worship singles** — *Have Mercy on Me* and *Here I Am, Lord* (pre-save) on `/worship/`
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
-- [ ] **YouTube migration (remaining)** — move worship/confessions MP3s to YouTube embeds when ready
+- [ ] **YouTube migration (remaining)** — move confessions MP3s to YouTube embeds when ready; add worship streaming players after July 3, 2026
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 
 ## Vision

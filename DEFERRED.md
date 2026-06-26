@@ -14,11 +14,14 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 ## Reflections Section
 `/reflections/` lists **Alone in an Empty Grave** and **Lost** (both pre-save live; streaming players after July 3, 2026). Pre-save: [alone-in-an-empty-grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave), [lost](https://distrokid.com/hyperfollow/spokendevotion/lost). Lyrics in `reflections/reflections.json`.
 
+## Worship Singles
+**Have Mercy on Me** and **Here I Am, Lord** uploaded to DistroKid for **July 3, 2026** release. Pre-sales open now. Pre-save: [have-mercy-on-me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me), [here-i-am-lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord). Credits: lyrics by Anthony, produced and sang by Suno. Add streaming players to `/worship/` when live. Lyrics in `worship/lyrics.json`.
+
 ## Instrumental Tracks
 Instrumental page is live in navigation (Soon badge) with a coming-soon message. Add real tracks when audio files are ready.
 
 ## YouTube Migration for Audio
-Prayer section complete — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds. Remaining sections (worship, confessions) still use hosted MP3s where applicable.
+Prayer section complete — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds. Worship singles are on DistroKid pre-save (MP3 previews removed from `/worship/` until streaming goes live). Confessions still use hosted MP3s where applicable.
 
 ## Banner Image Optimization
 All section banners are in place (`main`, `bible`, `confession`, `instrumental`, `prayer`, `reflections`, `worship`). Optional: compress large PNGs (e.g. `instrumental.png`, `worship.png`) for faster loads.
