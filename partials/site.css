@@ -353,6 +353,200 @@ button.album-track__action:hover {
     color: #fcd34d;
 }
 
+/* Compact release digest — homepage */
+.release-digest {
+    background: rgba(24, 24, 27, 0.85);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.5rem;
+}
+@media (min-width: 768px) {
+    .release-digest {
+        padding: 1.5rem 1.75rem;
+    }
+}
+.release-digest__heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.release-digest__featured {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.85rem;
+    border-radius: 0.85rem;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.35) 0%, rgba(24, 24, 27, 0.9) 60%);
+    border: 1px solid rgba(251, 191, 36, 0.45);
+}
+.release-digest__badge {
+    flex-shrink: 0;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #18181b;
+    background: #fbbf24;
+    padding: 0.25rem 0.55rem;
+    border-radius: 9999px;
+}
+.release-digest__featured-body {
+    flex: 1 1 12rem;
+    min-width: 0;
+}
+.release-digest__featured-title {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+.release-digest__featured-meta {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.15rem;
+}
+.release-digest__featured-link {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fbbf24;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+.release-digest__featured-link:hover {
+    color: #fcd34d;
+}
+.release-digest__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.release-digest__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.25rem 0.75rem;
+    padding: 0.5rem 0.65rem;
+    border-radius: 0.65rem;
+    border: 1px solid rgba(251, 191, 36, 0.12);
+    background: rgba(9, 9, 11, 0.35);
+    font-size: 0.85rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+a.release-digest__item:hover {
+    border-color: rgba(251, 191, 36, 0.35);
+    background: rgba(251, 191, 36, 0.06);
+}
+.release-digest__item-title {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+.release-digest__item-meta {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+.release-digest__note {
+    margin-top: 0.85rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Streaming platform cards */
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+    gap: 0.65rem;
+}
+@media (min-width: 640px) {
+    .platform-grid {
+        grid-template-columns: repeat(auto-fill, minmax(7.25rem, 1fr));
+        gap: 0.75rem;
+    }
+}
+.platform-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 0.5rem;
+    text-align: center;
+    background: rgba(24, 24, 27, 0.8);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 1rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+a.platform-card:hover {
+    background: rgba(251, 191, 36, 0.08);
+    border-color: rgba(251, 191, 36, 0.55);
+}
+.platform-card--soon {
+    opacity: 0.75;
+    cursor: default;
+    border-color: rgba(251, 191, 36, 0.22);
+    pointer-events: none;
+}
+.platform-card__badge {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.5625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #18181b;
+    background: #fbbf24;
+    padding: 0.15rem 0.4rem;
+    border-radius: 9999px;
+    line-height: 1.2;
+}
+.platform-card__icon {
+    font-size: 1.65rem;
+    color: #fbbf24;
+    margin-bottom: 0.4rem;
+}
+@media (min-width: 768px) {
+    .platform-card__icon {
+        font-size: 1.85rem;
+    }
+}
+.platform-card__name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+@media (min-width: 768px) {
+    .platform-card__name {
+        font-size: 0.75rem;
+    }
+}
+.platform-card__status {
+    font-size: 0.5625rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.2rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.1rem;
+}
+
 .toast {
     position: fixed;
     bottom: 20px;

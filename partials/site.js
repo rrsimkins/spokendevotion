@@ -128,6 +128,59 @@
         return data;
     };
 
+    function renderStreamingPlatforms() {
+        var config = window.SD_STREAMING_PLATFORMS;
+        if (!config || !config.platforms || !config.platforms.length) return;
+
+        document.querySelectorAll('[data-streaming-platforms]').forEach(function (container) {
+            var grid = document.createElement('div');
+            grid.className = 'platform-grid';
+
+            config.platforms.forEach(function (platform) {
+                var card;
+                if (platform.url) {
+                    card = document.createElement('a');
+                    card.href = platform.url;
+                    card.target = '_blank';
+                    card.rel = 'noopener noreferrer';
+                    card.className = 'platform-card';
+                    card.setAttribute('aria-label', platform.name + ' — Spoken Devotion Music');
+                } else {
+                    card = document.createElement('div');
+                    card.className = 'platform-card platform-card--soon';
+                    card.setAttribute('aria-label', platform.name + ' — coming soon');
+                }
+
+                if (!platform.url) {
+                    var badge = document.createElement('span');
+                    badge.className = 'platform-card__badge';
+                    badge.textContent = 'Soon';
+                    card.appendChild(badge);
+                }
+
+                var icon = document.createElement('i');
+                icon.className = (platform.icon || 'fa-solid fa-music') + ' platform-card__icon';
+                icon.setAttribute('aria-hidden', 'true');
+                card.appendChild(icon);
+
+                var name = document.createElement('span');
+                name.className = 'platform-card__name';
+                name.textContent = platform.name;
+                card.appendChild(name);
+
+                var handle = document.createElement('span');
+                handle.className = 'platform-card__status';
+                handle.textContent = platform.url ? config.artistName || 'Listen' : 'Coming soon';
+                card.appendChild(handle);
+
+                grid.appendChild(card);
+            });
+
+            container.innerHTML = '';
+            container.appendChild(grid);
+        });
+    }
+
     function initPageBanners() {
         document.querySelectorAll('[data-banner]').forEach(function (section) {
             var url = section.getAttribute('data-banner');
@@ -156,5 +209,6 @@
     document.addEventListener('DOMContentLoaded', function () {
         loadPartials();
         initPageBanners();
+        renderStreamingPlatforms();
     });
 })();
