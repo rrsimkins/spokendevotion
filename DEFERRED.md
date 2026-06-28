@@ -2,6 +2,22 @@
 
 Items intentionally held for later — not forgotten.
 
+## June 28, 2026 Release (DistroKid)
+
+Pre-sales are **open now**; full release **June 28, 2026 at midnight Central Time** on Spotify, Apple Music, and other platforms.
+
+| Release | Type | Pre-save |
+|---------|------|----------|
+| **Resting in the Father I** | Instrumental album (20 tracks) | [resting-in-the-father](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) |
+
+Central config: `partials/streaming-config.js`. After release, add a streaming player to `/instrumental/`.
+
+### Credits
+
+| Section | Credit |
+|---------|--------|
+| Instrumental (20) | Produced by Suno |
+
 ## July 3, 2026 Release Wave (DistroKid)
 
 Pre-sales are **open now**; full release **July 3, 2026** on Spotify, Apple Music, and other platforms.
@@ -33,13 +49,13 @@ Central config: `partials/streaming-config.js`. After release, replace homepage 
 
 Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site key are in `partials/contact-config.js`. Turnstile **secret key** lives only in the Formspark dashboard. Notification email: `contact@spokendevotion.com`.
 
-## Instrumental Tracks
+## Instrumental — Post-Release
 
-Instrumental page is live in navigation (Soon badge) with a coming-soon message. Add real tracks when audio files are ready.
+*Resting in the Father I* is live on `/instrumental/` with pre-save and full tracklist. After June 28, 2026 release, add streaming player embed and remove nav Soon badge when ready.
 
 ## YouTube Migration for Audio
 
-Prayer section: Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds; remaining album tracks stream via DistroKid July 3, 2026. Worship and Reflections singles have no hosted MP3s on the site (pre-save only). Confessions still use hosted MP3s until DistroKid upload.
+Prayer section: Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds; remaining album tracks stream via DistroKid July 3, 2026. Worship and Reflections singles have no hosted MP3s on the site (pre-save only). Confessions still use hosted MP3s until DistroKid upload. Instrumental album has no hosted MP3s on the site (pre-save only).
 
 ## Banner Image Optimization
 

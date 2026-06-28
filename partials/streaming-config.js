@@ -24,6 +24,15 @@ window.SD_STREAMING = {
 
     confessionsCredit: 'Written by Ruby Rose and recited and produced by Suno',
 
+    instrumentalAlbumTitle: 'Resting in the Father I',
+    instrumentalAlbumSubtitle: 'Twenty quiet instrumental tracks for prayer and reflection',
+    instrumentalCredit: 'Produced by Suno',
+    instrumentalReleaseDate: '2026-06-28',
+    instrumentalReleaseDateLabel: 'June 28, 2026',
+    instrumentalReleaseTimeLabel: 'midnight Central Time',
+    instrumentalReleaseStatus: 'presave',
+    instrumentalPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father',
+
     featuredArtist: 'Ruby Rose',
 
     // Back-compat aliases used on the homepage script

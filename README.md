@@ -28,7 +28,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Confessions** | Three spoken-word pieces — hosted MP3 previews until DistroKid upload | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
-| **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
+| **Instrumental** | *Resting in the Father I* album — pre-save now, releases June 28, 2026 at midnight Central Time | [Instrumental](https://spokendevotion.com/instrumental/) |
 | **Prayer** | *Prayers to the Father* album — pre-save now, releases July 3, 2026; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
 | **Reflections** | *Alone in an Empty Grave* and *Lost* — written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
 | **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — lyrics by Anthony, produced and sang by Suno; pre-save now | [Worship](https://spokendevotion.com/worship/) |
@@ -44,7 +44,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Nav Soon badge** on Instrumental
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
-- Content managed via JSON files for easy updates (`prayer.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`)
+- Content managed via JSON files for easy updates (`prayer.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
 - Release metadata centralized in `partials/streaming-config.js`
 
 ## Banner Images
@@ -70,8 +70,9 @@ Active on:
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Streaming — pre-sales open now; full release **July 3, 2026**:
-- [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album)
+Streaming — pre-sales open now:
+- [Resting in the Father I](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) (Instrumental album) — releases **June 28, 2026** at midnight Central Time
+- [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album) — releases **July 3, 2026**
 - [Alone in an Empty Grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave), [Lost](https://distrokid.com/hyperfollow/spokendevotion/lost) (Reflections)
 - [Have Mercy on Me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me), [Here I Am, Lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) (Worship)
 - Spotify, Apple Music, and other major platforms at release
@@ -87,12 +88,13 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
 - [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* (both pre-save) on `/reflections/`
 - [x] **Worship singles** — *Have Mercy on Me* and *Here I Am, Lord* (pre-save) on `/worship/`
-- [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
+- [x] **Resting in the Father I** — instrumental album on DistroKid; pre-sales open; releases June 28, 2026 at midnight Central Time
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [ ] **Confessions on DistroKid** — upload three tracks; replace hosted MP3s with pre-save / streaming cards
-- [ ] **Streaming players** — add embeds on `/reflections/` and `/worship/` after July 3, 2026 release
+- [ ] **Streaming players** — add embed on `/instrumental/` after June 28, 2026 release; add embeds on `/reflections/` and `/worship/` after July 3, 2026 release
+- [ ] **Nav Soon badge** — remove Instrumental badge after release goes live
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 
 ## Vision
