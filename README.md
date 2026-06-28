@@ -20,7 +20,7 @@ If something here moves you and you feel stirred to give, we gently invite you t
 
 ## Current Site Sections
 
-Navigation section links are in **alphabetical order**. The nav button reads **Contact** (the page title remains Contact Us). *Soon* badges mark sections still being built out.
+Navigation section links are in **alphabetical order**. The nav button reads **Contact** (the page title remains Contact Us).
 
 | Section | Description | Link |
 |---------|-------------|------|
@@ -41,7 +41,6 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible) or direct audio links (Confessions previews)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
-- **Nav Soon badge** on Instrumental
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
@@ -100,7 +99,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [ ] **Confessions on DistroKid** — upload three tracks; replace hosted MP3s with pre-save / streaming cards
 - [ ] **Streaming players** — add embed on `/instrumental/` after June 28, 2026 release; add embeds on `/reflections/` and `/worship/` after July 3, 2026 release
-- [ ] **Nav Soon badge** — remove Instrumental badge after release goes live
+- [x] **Nav Soon badge** — Instrumental badge removed
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 
 ## Vision

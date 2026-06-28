@@ -3,7 +3,7 @@
 
     async function loadPartials() {
         await Promise.all([
-            loadPartial('nav-root', '/partials/nav.html?v=18'),
+            loadPartial('nav-root', '/partials/nav.html?v=19'),
             loadPartial('footer-root', '/partials/footer.html?v=14')
         ]);
         initMobileNav();

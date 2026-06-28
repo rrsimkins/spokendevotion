@@ -51,7 +51,7 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 
 ## Instrumental — Post-Release
 
-*Resting in the Father I* is live on `/instrumental/` with pre-save and full tracklist. After June 28, 2026 release, add streaming player embed and remove nav Soon badge when ready.
+*Resting in the Father I* is live on `/instrumental/` with pre-save and full tracklist. Nav Soon badge removed. After June 28, 2026 release, add streaming player embed.
 
 ## YouTube Migration for Audio
 
