@@ -9,7 +9,7 @@ window.SD_STREAMING_PLATFORMS = {
         { id: 'spotify',      name: 'Spotify',        icon: 'fa-brands fa-spotify',      url: null },
         { id: 'apple',        name: 'Apple Music',    icon: 'fa-brands fa-apple',        url: 'https://music.apple.com/us/artist/spoken-devotion/6784853329' },
         { id: 'amazon',       name: 'Amazon Music',   icon: 'fa-brands fa-amazon',       url: null },
-        { id: 'youtube',      name: 'YouTube Music',  icon: 'fa-brands fa-youtube',      url: null },
+        { id: 'youtube',      name: 'YouTube Music',  icon: 'fa-brands fa-youtube',      url: 'https://music.youtube.com/channel/UCp-tiQ4aBXVYgM50SbwOhsQ' },
         { id: 'pandora',      name: 'Pandora',        icon: 'fa-solid fa-compact-disc',  url: null },
         { id: 'iheart',       name: 'iHeartRadio',    icon: 'fa-solid fa-heart',         url: null },
         { id: 'deezer',       name: 'Deezer',         icon: 'fa-solid fa-wave-square',   url: null },
