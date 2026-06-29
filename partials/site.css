@@ -466,6 +466,20 @@ a.release-digest__item:hover {
 }
 
 /* Streaming platform cards */
+.platform-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.platform-group__label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(251, 191, 36, 0.75);
+    text-align: center;
+    margin-bottom: 0.65rem;
+}
 .platform-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
